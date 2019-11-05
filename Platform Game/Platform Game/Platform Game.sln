@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestingGrounds", "TestingGrounds\TestingGrounds.csproj", "{685076E3-8118-4FEC-BCD6-3CAC289B121F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPlatformer", "..\..\..\..\..\..\Desktop\TestPlatformer\TestPlatformer\TestPlatformer.csproj", "{A08E2083-5314-4195-958F-C1D83A6EE3CD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPlatformer", "TestPlatformer\TestPlatformer.csproj", "{A08E2083-5314-4195-958F-C1D83A6EE3CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
