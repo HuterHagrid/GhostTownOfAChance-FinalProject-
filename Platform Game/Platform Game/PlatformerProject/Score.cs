@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestPlatformer
+namespace PlatformerProject
 {
     class Score
     {
         long scoreNumber;
+        
         public Score()
         {
             this.scoreNumber = 0;
@@ -19,5 +20,18 @@ namespace TestPlatformer
             this.scoreNumber = obj.scoreNumber;
         }
 
+        public void IncrementScore(int pointValue)
+        {
+            this.scoreNumber += pointValue;
+        }
+        public long GetScore()
+        {
+            return scoreNumber;
+        }
+
+        public override string ToString()
+        {
+            return "Score" + scoreNumber;
+        }
     }
 }
