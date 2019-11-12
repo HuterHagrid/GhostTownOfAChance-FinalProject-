@@ -48,19 +48,17 @@
             this.screen.Controls.Add(this.block);
             this.screen.Controls.Add(this.player);
             this.screen.Location = new System.Drawing.Point(0, 0);
-            this.screen.Margin = new System.Windows.Forms.Padding(2);
             this.screen.Name = "screen";
-            this.screen.Size = new System.Drawing.Size(533, 278);
+            this.screen.Size = new System.Drawing.Size(800, 428);
             this.screen.TabIndex = 0;
             // 
             // block1
             // 
             this.block1.BackColor = System.Drawing.Color.Transparent;
             this.block1.BackgroundImage = global::TestPlatformer.Properties.Resources.block;
-            this.block1.Location = new System.Drawing.Point(32, 228);
-            this.block1.Margin = new System.Windows.Forms.Padding(2);
+            this.block1.Location = new System.Drawing.Point(48, 351);
             this.block1.Name = "block1";
-            this.block1.Size = new System.Drawing.Size(187, 10);
+            this.block1.Size = new System.Drawing.Size(280, 15);
             this.block1.TabIndex = 2;
             this.block1.TabStop = false;
             this.block1.Tag = "platform";
@@ -69,10 +67,9 @@
             // 
             this.block.BackColor = System.Drawing.Color.Transparent;
             this.block.BackgroundImage = global::TestPlatformer.Properties.Resources.block;
-            this.block.Location = new System.Drawing.Point(316, 228);
-            this.block.Margin = new System.Windows.Forms.Padding(2);
+            this.block.Location = new System.Drawing.Point(474, 351);
             this.block.Name = "block";
-            this.block.Size = new System.Drawing.Size(187, 10);
+            this.block.Size = new System.Drawing.Size(280, 15);
             this.block.TabIndex = 1;
             this.block.TabStop = false;
             this.block.Tag = "platform";
@@ -81,13 +78,13 @@
             // 
             this.player.BackColor = System.Drawing.Color.Transparent;
             this.player.Image = global::TestPlatformer.Properties.Resources.stand_right;
-            this.player.Location = new System.Drawing.Point(113, 72);
-            this.player.Margin = new System.Windows.Forms.Padding(2);
+            this.player.Location = new System.Drawing.Point(170, 111);
             this.player.Name = "player";
-            this.player.Size = new System.Drawing.Size(16, 21);
+            this.player.Size = new System.Drawing.Size(24, 32);
             this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.player.TabIndex = 0;
             this.player.TabStop = false;
+            
             // 
             // timer
             // 
@@ -100,21 +97,19 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImage = global::TestPlatformer.Properties.Resources.ground;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 257);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(0, 395);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(533, 35);
+            this.panel1.Size = new System.Drawing.Size(800, 54);
             this.panel1.TabIndex = 2;
             this.panel1.Tag = "platform";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 292);
+            this.ClientSize = new System.Drawing.Size(800, 449);
             this.Controls.Add(this.screen);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "GhostTown";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
