@@ -31,7 +31,7 @@ namespace PlatformerProject
 
         public override string ToString()
         {
-            return "Score" + scoreNumber;
+            return "Score: " + scoreNumber;
         }
     }
 }

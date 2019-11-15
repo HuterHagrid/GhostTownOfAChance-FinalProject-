@@ -8,12 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Platform_Game
+namespace PlatformerProject
 {
     public partial class Form1 : Form
     {
         private const int FORCE = 12;
         private const int JUMP_SPEED = 10;
+        Score score;
+        /*
+         Score Point value:
+            Coin = 50
+            Tortise = 100
+            Ghost = 500
+            Barrel = 100
+         */
 
         bool goleft = false;
         bool goright = false;
@@ -26,6 +34,7 @@ namespace Platform_Game
         public Form1()
         {
             InitializeComponent();
+            score = new Score();
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -118,6 +127,26 @@ namespace Platform_Game
                     }
                 }
 
+                // Collect coin for 50 points
+                if (x is PictureBox && x.Tag == "coin")
+                {
+                    if (player.Bounds.IntersectsWith(x.Bounds))
+                    {
+                        this.Controls.Remove(x);
+                        score.IncrementScore(50);
+                        
+                    }
+                }
+
+                if (x is PictureBox && x.Tag == "enemy")
+                {
+                    if (player.Bounds.IntersectsWith(x.Bounds))
+                    {
+                        this.Controls.Remove(player);
+
+                    }
+                }
+
                 //
                 if (x is PictureBox && x.Tag == "platform_bottom")
                 {
@@ -144,7 +173,10 @@ namespace Platform_Game
                 }
             }
             // End of Collision Check
-            //player.Image = Image.FromFile("run_right.gif");
+            /*
+             if EnemyObject collides with player
+                
+            */
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace TestPlatformer
+﻿namespace Tester
 {
     partial class Form1
     {
@@ -55,7 +55,7 @@
             // block1
             // 
             this.block1.BackColor = System.Drawing.Color.Transparent;
-            this.block1.BackgroundImage = global::TestPlatformer.Properties.Resources.block;
+            this.block1.BackgroundImage = global::Tester.Properties.Resources.block;
             this.block1.Location = new System.Drawing.Point(48, 351);
             this.block1.Name = "block1";
             this.block1.Size = new System.Drawing.Size(280, 15);
@@ -66,7 +66,7 @@
             // block
             // 
             this.block.BackColor = System.Drawing.Color.Transparent;
-            this.block.BackgroundImage = global::TestPlatformer.Properties.Resources.block;
+            this.block.BackgroundImage = global::Tester.Properties.Resources.block;
             this.block.Location = new System.Drawing.Point(474, 351);
             this.block.Name = "block";
             this.block.Size = new System.Drawing.Size(280, 15);
@@ -77,7 +77,7 @@
             // player
             // 
             this.player.BackColor = System.Drawing.Color.Transparent;
-            this.player.Image = global::TestPlatformer.Properties.Resources.stand_right;
+            this.player.Image = global::Tester.Properties.Resources.stand_right;
             this.player.Location = new System.Drawing.Point(170, 111);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(24, 32);
@@ -95,7 +95,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BackgroundImage = global::TestPlatformer.Properties.Resources.ground;
+            this.panel1.BackgroundImage = global::Tester.Properties.Resources.ground;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 395);
             this.panel1.Name = "panel1";

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TestPlatformer.Properties {
+namespace Tester.Properties {
     using System;
     
     
