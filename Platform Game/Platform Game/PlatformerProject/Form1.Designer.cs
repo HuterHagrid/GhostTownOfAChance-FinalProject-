@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.ghostie = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.tortise = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -39,7 +43,10 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.player = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tortise = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ghostie)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tortise)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -49,7 +56,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tortise)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -58,11 +64,54 @@
             this.timer1.Interval = 5;
             this.timer1.Tick += new System.EventHandler(this.timer_Tick);
             // 
+            // ghostie
+            // 
+            this.ghostie.BackColor = System.Drawing.Color.Transparent;
+            this.ghostie.Image = global::PlatformerProject.Properties.Resources.ghostLeft;
+            this.ghostie.Location = new System.Drawing.Point(407, 736);
+            this.ghostie.Name = "ghostie";
+            this.ghostie.Size = new System.Drawing.Size(14, 14);
+            this.ghostie.TabIndex = 13;
+            this.ghostie.TabStop = false;
+            this.ghostie.Tag = "ghost";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.BackgroundImage = global::PlatformerProject.Properties.Resources.block;
+            this.pictureBox6.Location = new System.Drawing.Point(89, 699);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(216, 9);
+            this.pictureBox6.TabIndex = 12;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Tag = "platform_bottom";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox9.BackgroundImage = global::PlatformerProject.Properties.Resources.block;
+            this.pictureBox9.Location = new System.Drawing.Point(89, 683);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(216, 25);
+            this.pictureBox9.TabIndex = 11;
+            this.pictureBox9.TabStop = false;
+            this.pictureBox9.Tag = "platform";
+            // 
+            // tortise
+            // 
+            this.tortise.BackColor = System.Drawing.Color.DarkGreen;
+            this.tortise.Location = new System.Drawing.Point(220, 644);
+            this.tortise.Name = "tortise";
+            this.tortise.Size = new System.Drawing.Size(40, 33);
+            this.tortise.TabIndex = 10;
+            this.tortise.TabStop = false;
+            this.tortise.Tag = "enemy";
+            // 
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.BackgroundImage = global::PlatformerProject.Properties.Resources.block;
-            this.pictureBox5.Location = new System.Drawing.Point(332, 711);
+            this.pictureBox5.Location = new System.Drawing.Point(330, 772);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(216, 9);
             this.pictureBox5.TabIndex = 9;
@@ -73,7 +122,7 @@
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.BackgroundImage = global::PlatformerProject.Properties.Resources.block;
-            this.pictureBox8.Location = new System.Drawing.Point(332, 695);
+            this.pictureBox8.Location = new System.Drawing.Point(330, 756);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(216, 25);
             this.pictureBox8.TabIndex = 8;
@@ -140,7 +189,7 @@
             this.player.Image = global::PlatformerProject.Properties.Resources.stand_right;
             this.player.Location = new System.Drawing.Point(148, 791);
             this.player.Name = "player";
-            this.player.Size = new System.Drawing.Size(24, 32);
+            this.player.Size = new System.Drawing.Size(16, 21);
             this.player.TabIndex = 1;
             this.player.TabStop = false;
             // 
@@ -155,22 +204,16 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Tag = "platform";
             // 
-            // tortise
-            // 
-            this.tortise.BackColor = System.Drawing.Color.DarkGreen;
-            this.tortise.Location = new System.Drawing.Point(417, 639);
-            this.tortise.Name = "tortise";
-            this.tortise.Size = new System.Drawing.Size(100, 50);
-            this.tortise.TabIndex = 10;
-            this.tortise.TabStop = false;
-            this.tortise.Tag = "enemy";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(978, 945);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.ghostie);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.tortise);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox8);
@@ -180,11 +223,14 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.player);
-            this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
+            ((System.ComponentModel.ISupportInitialize)(this.ghostie)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tortise)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -194,7 +240,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tortise)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -212,6 +257,9 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox tortise;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox ghostie;
     }
 }
 

@@ -13,7 +13,7 @@ namespace PlatformerProject
     public partial class Form1 : Form
     {
         private const int FORCE = 12;
-        private const int JUMP_SPEED = 10;
+        private const int JUMP_SPEED = 8;
         Score score;
         /*
          Score Point value:
@@ -74,6 +74,15 @@ namespace PlatformerProject
             }
         }
 
+        private void GameOver()
+        {
+            player.Image = Image.FromFile("death.png");
+            timer1.Stop();
+            MessageBox.Show("Game Over \nScore: " + score.ToString());
+            this.Controls.Remove(player);
+            Application.Exit();
+        }
+
         private void timer_Tick(object sender, EventArgs e)
         {
             player.Top += jumpspeed;
@@ -85,14 +94,14 @@ namespace PlatformerProject
 
             if (goleft)
             {
-                if (movespeed < 10)
+                if (movespeed < 3)
                     movespeed += 1;
                 player.Left -= movespeed;
                 player.Image = Image.FromFile("run_left.gif");
             }
             else if (goright)
             {
-                if (movespeed < 10)
+                if (movespeed < 3)
                     movespeed += 1;
                 player.Left += movespeed;
                 player.Image = Image.FromFile("run_right.gif");
@@ -137,13 +146,19 @@ namespace PlatformerProject
                         
                     }
                 }
-
-                if (x is PictureBox && x.Tag == "enemy")
+                //enemy controls
+                if (x is PictureBox && x.Tag == "enemy" || x.Tag == "ghost")
                 {
+                    this.movespeed = 3;
+                    if(this.Bounds.IntersectsWith(x.Bounds) && x.Tag == "edge")
+                    {
+
+                    }
+
+                    //death
                     if (player.Bounds.IntersectsWith(x.Bounds))
                     {
-                        this.Controls.Remove(player);
-
+                        GameOver();
                     }
                 }
 

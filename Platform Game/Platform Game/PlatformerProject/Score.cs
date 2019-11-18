@@ -23,6 +23,8 @@ namespace PlatformerProject
         public void IncrementScore(int pointValue)
         {
             this.scoreNumber += pointValue;
+            GetScore();
+
         }
         public long GetScore()
         {

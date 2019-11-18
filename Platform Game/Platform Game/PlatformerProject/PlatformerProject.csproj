@@ -109,5 +109,8 @@
   <ItemGroup>
     <None Include="bin\Debug\Coin.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ghostLeft.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
