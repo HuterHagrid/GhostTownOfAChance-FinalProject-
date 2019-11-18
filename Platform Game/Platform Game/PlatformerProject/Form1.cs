@@ -80,7 +80,7 @@ namespace PlatformerProject
             timer1.Stop();
             MessageBox.Show("Game Over \nScore: " + score.ToString());
             this.Controls.Remove(player);
-            Application.Exit();
+            Application.Restart();
         }
 
         private void timer_Tick(object sender, EventArgs e)
