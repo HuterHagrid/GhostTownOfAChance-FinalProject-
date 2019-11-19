@@ -85,6 +85,8 @@ namespace PlatformerProject
 
         private void timer_Tick(object sender, EventArgs e)
         {
+            UpdateScore();
+            
             player.Top += jumpspeed;
 
             if (jumping && force < 0)
@@ -121,6 +123,11 @@ namespace PlatformerProject
             else
             {
                 jumpspeed = JUMP_SPEED;
+            }
+
+            if (player.Bounds.IntersectsWith(pictureBox1.Bounds)) {
+                force = FORCE;
+                player.Top = pictureBox1.Top - player.Height;
             }
 
             // Collision Check
@@ -192,6 +199,16 @@ namespace PlatformerProject
              if EnemyObject collides with player
                 
             */
+        }
+
+        private void UpdateScore()
+        {
+            scoreTextBox.Text = "Score " + score.GetScore();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
