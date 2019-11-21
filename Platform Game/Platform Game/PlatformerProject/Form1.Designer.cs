@@ -43,6 +43,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.player = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.scoreTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ghostie)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -61,7 +62,7 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 5;
+            this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // ghostie
@@ -148,12 +149,12 @@
             // 
             // coin
             // 
-            this.coin.BackColor = System.Drawing.Color.Transparent;
+            this.coin.BackColor = System.Drawing.Color.White;
             this.coin.Image = global::PlatformerProject.Properties.Resources.Coin;
-            this.coin.Location = new System.Drawing.Point(486, 491);
+            this.coin.Location = new System.Drawing.Point(486, 482);
             this.coin.Margin = new System.Windows.Forms.Padding(2);
             this.coin.Name = "coin";
-            this.coin.Size = new System.Drawing.Size(9, 11);
+            this.coin.Size = new System.Drawing.Size(29, 26);
             this.coin.TabIndex = 6;
             this.coin.TabStop = false;
             this.coin.Tag = "coin";
@@ -177,7 +178,7 @@
             this.pictureBox3.Location = new System.Drawing.Point(1, -1);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(23, 588);
+            this.pictureBox3.Size = new System.Drawing.Size(23, 605);
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Tag = "edge";
@@ -189,7 +190,7 @@
             this.pictureBox2.Location = new System.Drawing.Point(628, -1);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(23, 588);
+            this.pictureBox2.Size = new System.Drawing.Size(23, 615);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Tag = "edge";
@@ -215,7 +216,18 @@
             this.pictureBox1.Size = new System.Drawing.Size(651, 32);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Tag = "platform";
+            this.pictureBox1.Tag = "ground";
+            // 
+            // scoreTextBox
+            // 
+            this.scoreTextBox.BackColor = System.Drawing.Color.Black;
+            this.scoreTextBox.Enabled = false;
+            this.scoreTextBox.ForeColor = System.Drawing.Color.Yellow;
+            this.scoreTextBox.Location = new System.Drawing.Point(486, 38);
+            this.scoreTextBox.Name = "scoreTextBox";
+            this.scoreTextBox.Size = new System.Drawing.Size(100, 20);
+            this.scoreTextBox.TabIndex = 14;
+            this.scoreTextBox.Text = "Score";
             // 
             // Form1
             // 
@@ -223,6 +235,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(652, 615);
+            this.Controls.Add(this.scoreTextBox);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ghostie);
             this.Controls.Add(this.pictureBox6);
@@ -239,6 +252,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.ghostie)).EndInit();
@@ -255,6 +269,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -274,6 +289,7 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox ghostie;
+        private System.Windows.Forms.TextBox scoreTextBox;
     }
 }
 
