@@ -26,7 +26,7 @@ namespace PlatformerProject
                 if (movespeed < 3)
                     movespeed += 1;
                 this.Left -= movespeed;
-                this.Image = Image.FromFile("run_left.gif");
+                //this.Image = Image.FromFile("run_left.gif");
                 leftCount++;
             }
             SwitchDirection(leftCount, rightCount);
@@ -35,7 +35,7 @@ namespace PlatformerProject
                 if (movespeed < 3)
                     movespeed += 1;
                 this.Left += movespeed;
-                this.Image = Image.FromFile("run_right.gif");
+                //this.Image = Image.FromFile("run_right.gif");
                 rightCount++;
             }
             SwitchDirection(leftCount, rightCount);

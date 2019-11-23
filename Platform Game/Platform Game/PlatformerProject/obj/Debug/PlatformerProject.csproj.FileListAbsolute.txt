@@ -1,7 +1,6 @@
 C:\Users\W7123100\Source\Repos\HuterHagrid\GhostTownOfAChance-FinalProject-\Platform Game\Platform Game\PlatformerProject\obj\Debug\PlatformerProject.csprojAssemblyReference.cache
 C:\Users\W7123100\Source\Repos\HuterHagrid\GhostTownOfAChance-FinalProject-\Platform Game\Platform Game\PlatformerProject\obj\Debug\PlatformerProject.Properties.Resources.resources
 C:\Users\W7123100\Source\Repos\HuterHagrid\GhostTownOfAChance-FinalProject-\Platform Game\Platform Game\PlatformerProject\obj\Debug\PlatformerProject.csproj.GenerateResource.cache
-C:\Users\W7123100\Source\Repos\HuterHagrid\GhostTownOfAChance-FinalProject-\Platform Game\Platform Game\PlatformerProject\obj\Debug\PlatformerProject.csproj.CoreCompileInputs.cache
 C:\Users\W7123100\Source\Repos\HuterHagrid\GhostTownOfAChance-FinalProject-\Platform Game\Platform Game\PlatformerProject\bin\Debug\PlatformerProject.exe.config
 C:\Users\W7123100\Source\Repos\HuterHagrid\GhostTownOfAChance-FinalProject-\Platform Game\Platform Game\PlatformerProject\bin\Debug\PlatformerProject.exe
 C:\Users\W7123100\Source\Repos\HuterHagrid\GhostTownOfAChance-FinalProject-\Platform Game\Platform Game\PlatformerProject\bin\Debug\PlatformerProject.pdb
@@ -17,3 +16,4 @@ C:\Users\w7269699\Source\Repos\FukawaCarl155\GhostTownOfAChance-FinalProject-\Pl
 C:\Users\w7269699\Source\Repos\FukawaCarl155\GhostTownOfAChance-FinalProject-\Platform Game\Platform Game\PlatformerProject\obj\Debug\PlatformerProject.csproj.GenerateResource.cache
 C:\Users\w7269699\Source\Repos\FukawaCarl155\GhostTownOfAChance-FinalProject-\Platform Game\Platform Game\PlatformerProject\obj\Debug\PlatformerProject.exe
 C:\Users\w7269699\Source\Repos\FukawaCarl155\GhostTownOfAChance-FinalProject-\Platform Game\Platform Game\PlatformerProject\obj\Debug\PlatformerProject.pdb
+C:\Users\W7123100\Source\Repos\HuterHagrid\GhostTownOfAChance-FinalProject-\Platform Game\Platform Game\PlatformerProject\obj\Debug\PlatformerProject.Tortoise.resources
