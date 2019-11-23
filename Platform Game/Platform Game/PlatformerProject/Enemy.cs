@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PlatformerProject
 {
-    class Enemy
+    class Enemy : Form1
     {
         bool isAlive;
         int hitPoints;

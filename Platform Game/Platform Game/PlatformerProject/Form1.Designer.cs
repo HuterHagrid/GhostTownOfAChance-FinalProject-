@@ -33,7 +33,7 @@
             this.ghostie = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.tortise = new System.Windows.Forms.PictureBox();
+            this.tortoise = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -47,7 +47,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ghostie)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tortise)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tortoise)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -101,16 +101,16 @@
             this.pictureBox9.TabStop = false;
             this.pictureBox9.Tag = "platform";
             // 
-            // tortise
+            // tortoise
             // 
-            this.tortise.BackColor = System.Drawing.Color.DarkGreen;
-            this.tortise.Location = new System.Drawing.Point(147, 419);
-            this.tortise.Margin = new System.Windows.Forms.Padding(2);
-            this.tortise.Name = "tortise";
-            this.tortise.Size = new System.Drawing.Size(27, 21);
-            this.tortise.TabIndex = 10;
-            this.tortise.TabStop = false;
-            this.tortise.Tag = "enemy";
+            this.tortoise.BackColor = System.Drawing.Color.DarkGreen;
+            this.tortoise.Location = new System.Drawing.Point(147, 419);
+            this.tortoise.Margin = new System.Windows.Forms.Padding(2);
+            this.tortoise.Name = "tortoise";
+            this.tortoise.Size = new System.Drawing.Size(27, 21);
+            this.tortoise.TabIndex = 10;
+            this.tortoise.TabStop = false;
+            this.tortoise.Tag = "tortoise";
             // 
             // pictureBox5
             // 
@@ -150,7 +150,7 @@
             // coin
             // 
             this.coin.BackColor = System.Drawing.Color.White;
-            this.coin.Image = global::PlatformerProject.Properties.Resources.Coin;
+            this.coin.Image = global::PlatformerProject.Properties.Resources.coin;
             this.coin.Location = new System.Drawing.Point(486, 482);
             this.coin.Margin = new System.Windows.Forms.Padding(2);
             this.coin.Name = "coin";
@@ -240,7 +240,7 @@
             this.Controls.Add(this.ghostie);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox9);
-            this.Controls.Add(this.tortise);
+            this.Controls.Add(this.tortoise);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
@@ -258,7 +258,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ghostie)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tortise)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tortoise)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -285,7 +285,7 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox tortise;
+        private System.Windows.Forms.PictureBox tortoise;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox ghostie;
