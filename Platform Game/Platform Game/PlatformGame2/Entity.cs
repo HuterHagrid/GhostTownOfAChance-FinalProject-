@@ -18,6 +18,7 @@ namespace PlatformGame2
             {
                 Size = new Size(20, 20);
                 BackColor = Color.Yellow;
+                //Image = Image.FromFile("coin.png");
             }
             else if (tag.Equals("heart"))
             {
@@ -28,6 +29,7 @@ namespace PlatformGame2
             {
                 Size = new Size(40, 50);
                 BackColor = Color.Green;
+                
             }
             else if (tag.Equals("turtle"))
             {
