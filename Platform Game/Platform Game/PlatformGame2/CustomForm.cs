@@ -253,10 +253,6 @@ namespace PlatformGame2
                         onPlatform = false;
                         UpdateScore(-10);
                         UpdateLives(-1);
-                        if (NoLives())
-                        {
-                            End();
-                        }
                     }
                 }
 
@@ -268,10 +264,6 @@ namespace PlatformGame2
                     onPlatform = false;
                     UpdateScore(-10);
                     UpdateLives(-1);
-                    if (NoLives())
-                    {
-                        End();
-                    }
                 }
 
                 // Update Enemy movements
@@ -326,19 +318,10 @@ namespace PlatformGame2
         // Determines the Next level to go to
         public virtual void Next() { }
 
-        public virtual void End() { }
-
-        public bool NoLives()
-        {
-            return lives == 0;
-        }
-
         // Creates a Label for a stat keeper
         public Label labelMaker()
         {
             Label newLabel = new Label();
-            newLabel.AutoSize = false;
-            newLabel.TextAlign = ContentAlignment.MiddleRight;
             newLabel.Size = new Size(75, 25);
             newLabel.BackColor = Color.Black;
             newLabel.Font = new Font("Helvetica", 12, FontStyle.Regular);

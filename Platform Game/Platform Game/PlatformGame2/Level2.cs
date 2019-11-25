@@ -57,8 +57,7 @@ namespace PlatformGame2
 
             // These will be moved to other levels, this shows they work
             Barrel barrel1 = new Barrel(600, 500, true);
-            Controls.Add(barrel1);
-
+            
             Ghost ghost1 = new Ghost(400, 400, true);
             Controls.Add(ghost1);
             Ghost ghost2 = new Ghost(200, 200, false);
@@ -68,22 +67,14 @@ namespace PlatformGame2
 
         public override void Next()
         {
-            End();
-
+            Close();
+            
             // When Level 3 is addded change to:
 
+            // Hide();
             // Level3 level3 = new Level3(GetScore(), GetLives());
             // level3.Closed += (s, args) => this.Close();
-            // Hide();
             // level3.Show();
-        }
-
-        public override void End()
-        {
-            Splash splash = new Splash();
-            splash.Closed += (s, args) => this.Close();
-            Hide();
-            splash.Show();
         }
     }
 }

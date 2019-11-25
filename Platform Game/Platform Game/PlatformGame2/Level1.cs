@@ -48,9 +48,9 @@ namespace PlatformGame2
 
         public override void Next()
         {
+            Hide();
             Level2 level2 = new Level2(GetScore(), GetLives());
             level2.Closed += (s, args) => this.Close();
-            Hide();
             level2.Show();
         }
     }
