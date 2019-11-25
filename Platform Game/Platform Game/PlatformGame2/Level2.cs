@@ -76,5 +76,18 @@ namespace PlatformGame2
             // level3.Closed += (s, args) => this.Close();
             // level3.Show();
         }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // Level2
+            // 
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(292, 268);
+            this.Name = "Level2";
+            this.ResumeLayout(false);
+
+        }
     }
 }

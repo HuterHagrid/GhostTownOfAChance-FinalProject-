@@ -10,6 +10,7 @@ namespace PlatformGame2
             Location = new Point(locX, locY);
             Size = new Size(width, height);
             Tag = tag;
+            BackgroundImage = Image.FromFile("block.png");
             if (tag.Equals("platform"))
             {
                 BackColor = Color.Brown;

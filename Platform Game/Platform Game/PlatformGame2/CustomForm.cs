@@ -63,12 +63,18 @@ namespace PlatformGame2
             Controls.Add(player);
 
             // Game Bounds
+                //left wall
             Platform left = new Platform(0, 0, 20, Height, "edge");
             Controls.Add(left);
+            left.BackgroundImage = Image.FromFile("wall.png");
+                //right wall
             Platform right = new Platform(Width - 40, 0, 20, Height, "edge");
             Controls.Add(right);
+            right.BackgroundImage = Image.FromFile("wall.png");
+                   //ground
             Platform bottom = new Platform(0, Height - 75, Width, 20, "floor");
             Controls.Add(bottom);
+            bottom.BackgroundImage = Image.FromFile("ground.png");
         }
 
         private void InitializeComponent()
@@ -101,11 +107,13 @@ namespace PlatformGame2
             {
                 goLeft = true;
                 goRight = false;
+                player.Image = Image.FromFile("run_left.gif");
             }
             else if (e.KeyCode == Keys.Right)
             {
                 goRight = true;
                 goLeft = false;
+                player.Image = Image.FromFile("run_right.gif");
             }
 
             // Jumping, cannot double jump
@@ -114,6 +122,7 @@ namespace PlatformGame2
                 jumping = true;
                 onPlatform = false;
                 currentPlatform = null;
+                player.Image = Image.FromFile("jump_right.png");
             }
         }
 
@@ -123,10 +132,12 @@ namespace PlatformGame2
             if (e.KeyCode == Keys.Left)
             {
                 goLeft = false;
+                player.Image = Image.FromFile("stand_left.png");
             }
             if (e.KeyCode == Keys.Right)
             {
                 goRight = false;
+                player.Image = Image.FromFile("stand_right.png");
             }
             if (jumping)
             {
@@ -250,6 +261,7 @@ namespace PlatformGame2
                     {
                         player.Left = 60;
                         player.Top = 600;
+                        player.Image = Image.FromFile("death.png");
                         onPlatform = false;
                         UpdateScore(-10);
                         UpdateLives(-1);
@@ -261,6 +273,7 @@ namespace PlatformGame2
                 {
                     player.Left = 60;
                     player.Top = 600;
+                    player.Image = Image.FromFile("death.png");
                     onPlatform = false;
                     UpdateScore(-10);
                     UpdateLives(-1);
