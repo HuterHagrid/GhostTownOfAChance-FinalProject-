@@ -14,8 +14,8 @@ namespace PlatformerProject
     {
         private const int FORCE = 12;
         private const int JUMP_SPEED = 8;
-        //Tortoise tortoise = new Tortoise();
-        //Ghost ghost = new Ghost();
+        Tortoise yertle = new Tortoise();
+        Ghost boohoo = new Ghost();
         Score score;
         /*
          Score Point value:
@@ -156,8 +156,12 @@ namespace PlatformerProject
                     }
                 }
                 //enemy controls
-                if (x is PictureBox && x.Tag == "enemy" || x.Tag == "ghost")
+                if (x is PictureBox && x.Tag == "tortoise" || x.Tag == "ghost")
                 {
+                    if(x is PictureBox && x.Tag == "tortoise")
+                    {
+
+                    }
                     if (player.Bounds.IntersectsWith(x.Bounds))
                     {
                         GameOver();
