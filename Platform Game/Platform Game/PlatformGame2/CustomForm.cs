@@ -63,16 +63,16 @@ namespace PlatformGame2
             Controls.Add(player);
 
             // Game Bounds
-                //left wall
+            // left wall
             Platform left = new Platform(0, 0, 20, Height, "edge");
             Controls.Add(left);
             left.BackgroundImage = Image.FromFile("wall.png");
-                //right wall
-            Platform right = new Platform(Width - 40, 0, 20, Height, "edge");
+            // right wall
+            Platform right = new Platform(Width - 35, 0, 20, Height, "edge");
             Controls.Add(right);
             right.BackgroundImage = Image.FromFile("wall.png");
-                   //ground
-            Platform bottom = new Platform(0, Height - 75, Width, 20, "floor");
+            // ground
+            Platform bottom = new Platform(0, Height - 55, Width, 20, "floor");
             Controls.Add(bottom);
             bottom.BackgroundImage = Image.FromFile("ground.png");
         }
@@ -91,12 +91,14 @@ namespace PlatformGame2
             // 
             // CustomForm
             // 
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(978, 695);
             this.Name = "CustomForm";
             this.Text = "Ghost Town of a Chance";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyisdown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.keyisup);
             this.ResumeLayout(false);
+
         }
 
         // Detects User Inputs

@@ -34,9 +34,10 @@
             // 
             // playGameButton
             // 
-            this.playGameButton.Location = new System.Drawing.Point(414, 301);
+            this.playGameButton.Location = new System.Drawing.Point(433, 273);
+            this.playGameButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.playGameButton.Name = "playGameButton";
-            this.playGameButton.Size = new System.Drawing.Size(120, 33);
+            this.playGameButton.Size = new System.Drawing.Size(80, 21);
             this.playGameButton.TabIndex = 0;
             this.playGameButton.Text = "Play Game";
             this.playGameButton.UseVisualStyleBackColor = true;
@@ -44,22 +45,25 @@
             // 
             // quitButton
             // 
-            this.quitButton.Location = new System.Drawing.Point(414, 350);
+            this.quitButton.Location = new System.Drawing.Point(433, 304);
+            this.quitButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.quitButton.Name = "quitButton";
-            this.quitButton.Size = new System.Drawing.Size(120, 33);
+            this.quitButton.Size = new System.Drawing.Size(80, 21);
             this.quitButton.TabIndex = 1;
             this.quitButton.Text = "Quit";
             this.quitButton.UseVisualStyleBackColor = true;
             this.quitButton.Click += new System.EventHandler(this.quitButton_Click);
             // 
-            // Form1
+            // Splash
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(978, 695);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(984, 712);
             this.Controls.Add(this.quitButton);
             this.Controls.Add(this.playGameButton);
-            this.Name = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "Splash";
             this.Text = "Ghost Town of a Chance";
             this.ResumeLayout(false);
 

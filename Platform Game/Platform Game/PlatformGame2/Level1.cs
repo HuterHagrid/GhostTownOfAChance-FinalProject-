@@ -30,19 +30,19 @@ namespace PlatformGame2
             Platform plat11 = new Platform(675, 32 * JS, 200, 20, "platform");
             Controls.Add(plat11);
 
-            Entity coin1 = new Entity(630, 340, "coin");
+            Entity coin1 = new Entity(630, 350, "coin");
             Controls.Add(coin1);
-            Entity coin2 = new Entity(710, 340, "coin");
+            Entity coin2 = new Entity(710, 350, "coin");
             Controls.Add(coin2);
-            Entity coin3 = new Entity(790, 340, "coin");
+            Entity coin3 = new Entity(790, 350, "coin");
             Controls.Add(coin3);
-            Entity coin4 = new Entity(710, 445, "coin");
+            Entity coin4 = new Entity(710, 455, "coin");
             Controls.Add(coin4);
-            Entity coin5 = new Entity(790, 445, "coin");
+            Entity coin5 = new Entity(790, 455, "coin");
             Controls.Add(coin5);
-            Entity coin6 = new Entity(440, 45, "coin");
+            Entity coin6 = new Entity(440, 55, "coin");
             Controls.Add(coin6);
-            Entity exit = new Entity(800, 145, "exit");
+            Entity exit = new Entity(800, 170, "exit");
             Controls.Add(exit);
         }
 

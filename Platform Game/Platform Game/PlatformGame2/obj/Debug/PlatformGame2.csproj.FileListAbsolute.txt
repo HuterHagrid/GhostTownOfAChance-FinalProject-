@@ -20,3 +20,5 @@ C:\Users\W7123100\Source\Repos\HuterHagrid\GhostTownOfAChance-FinalProject-\Plat
 C:\Users\W7123100\Source\Repos\HuterHagrid\GhostTownOfAChance-FinalProject-\Platform Game\Platform Game\PlatformGame2\obj\Debug\PlatformGame2.pdb
 C:\Users\W7123100\Source\Repos\HuterHagrid\GhostTownOfAChance-FinalProject-\Platform Game\Platform Game\PlatformGame2\obj\Debug\PlatformGame2.Level1.resources
 C:\Users\W7123100\Source\Repos\HuterHagrid\GhostTownOfAChance-FinalProject-\Platform Game\Platform Game\PlatformGame2\obj\Debug\PlatformGame2.Level2.resources
+C:\Users\w7269699\Source\Repos\FukawaCarl155\GhostTownOfAChance-FinalProject-\Platform Game\Platform Game\PlatformGame2\obj\Debug\PlatformGame2.Level1.resources
+C:\Users\w7269699\Source\Repos\FukawaCarl155\GhostTownOfAChance-FinalProject-\Platform Game\Platform Game\PlatformGame2\obj\Debug\PlatformGame2.Level2.resources

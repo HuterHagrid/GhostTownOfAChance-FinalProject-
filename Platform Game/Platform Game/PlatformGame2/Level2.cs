@@ -57,7 +57,8 @@ namespace PlatformGame2
 
             // These will be moved to other levels, this shows they work
             Barrel barrel1 = new Barrel(600, 500, true);
-            
+            Controls.Add(barrel1);
+
             Ghost ghost1 = new Ghost(400, 400, true);
             Controls.Add(ghost1);
             Ghost ghost2 = new Ghost(200, 200, false);
