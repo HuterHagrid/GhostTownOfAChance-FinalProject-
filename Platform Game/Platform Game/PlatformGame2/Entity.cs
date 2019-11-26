@@ -37,7 +37,6 @@ namespace PlatformGame2
             else if (tag.Equals("barrel"))
             {
                 Size = new Size(14, 14);
-                BackColor = Color.Brown;
                 Image = Image.FromFile("barrelLeft.gif");
             }
             else if (tag.Equals("ghost"))
