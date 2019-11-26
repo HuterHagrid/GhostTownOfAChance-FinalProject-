@@ -66,15 +66,12 @@ namespace PlatformGame2
             // left wall
             Platform left = new Platform(0, 0, 20, Height, "edge");
             Controls.Add(left);
-            left.BackgroundImage = Image.FromFile("wall.png");
             // right wall
             Platform right = new Platform(Width - 35, 0, 20, Height, "edge");
             Controls.Add(right);
-            right.BackgroundImage = Image.FromFile("wall.png");
             // ground
             Platform bottom = new Platform(0, Height - 55, Width, 20, "floor");
             Controls.Add(bottom);
-            bottom.BackgroundImage = Image.FromFile("ground.png");
         }
 
         private void InitializeComponent()

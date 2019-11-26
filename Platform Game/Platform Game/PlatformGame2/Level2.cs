@@ -52,7 +52,7 @@ namespace PlatformGame2
             Turtle turtle6 = new Turtle(600, 130, true);     
             Controls.Add(turtle6);
 
-            Entity exit = new Entity(740, 100, "exit");
+            Entity exit = new Entity(740, 122, "exit");
             Controls.Add(exit);
 
             // These will be moved to other levels, this shows they work

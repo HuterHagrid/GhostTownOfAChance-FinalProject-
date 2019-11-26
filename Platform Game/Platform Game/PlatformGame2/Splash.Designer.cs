@@ -34,24 +34,26 @@
             // 
             // playGameButton
             // 
+            this.playGameButton.BackColor = System.Drawing.Color.White;
             this.playGameButton.Location = new System.Drawing.Point(433, 273);
-            this.playGameButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.playGameButton.Margin = new System.Windows.Forms.Padding(2);
             this.playGameButton.Name = "playGameButton";
             this.playGameButton.Size = new System.Drawing.Size(80, 21);
             this.playGameButton.TabIndex = 0;
             this.playGameButton.Text = "Play Game";
-            this.playGameButton.UseVisualStyleBackColor = true;
+            this.playGameButton.UseVisualStyleBackColor = false;
             this.playGameButton.Click += new System.EventHandler(this.playGameButton_Click);
             // 
             // quitButton
             // 
+            this.quitButton.BackColor = System.Drawing.Color.White;
             this.quitButton.Location = new System.Drawing.Point(433, 304);
-            this.quitButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.quitButton.Margin = new System.Windows.Forms.Padding(2);
             this.quitButton.Name = "quitButton";
             this.quitButton.Size = new System.Drawing.Size(80, 21);
             this.quitButton.TabIndex = 1;
             this.quitButton.Text = "Quit";
-            this.quitButton.UseVisualStyleBackColor = true;
+            this.quitButton.UseVisualStyleBackColor = false;
             this.quitButton.Click += new System.EventHandler(this.quitButton_Click);
             // 
             // Splash
@@ -62,7 +64,7 @@
             this.ClientSize = new System.Drawing.Size(984, 712);
             this.Controls.Add(this.quitButton);
             this.Controls.Add(this.playGameButton);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Splash";
             this.Text = "Ghost Town of a Chance";
             this.ResumeLayout(false);

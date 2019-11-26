@@ -1,4 +1,5 @@
-﻿
+﻿using System.Drawing;
+
 namespace PlatformGame2
 {
     class Turtle : Enemy
@@ -31,6 +32,7 @@ namespace PlatformGame2
                 if (x++ > MAX)
                 {
                     goLeft = false;
+                    Image = Image.FromFile("tortoiseLeft.gif");
                 }
             }
             else
@@ -39,6 +41,8 @@ namespace PlatformGame2
                 if (x-- < 0)
                 {
                     goLeft = true;
+                    Image = Image.FromFile("tortoiseRight.gif");
+
                 }
             }
         }

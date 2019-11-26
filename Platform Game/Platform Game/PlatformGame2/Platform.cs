@@ -10,14 +10,18 @@ namespace PlatformGame2
             Location = new Point(locX, locY);
             Size = new Size(width, height);
             Tag = tag;
-            BackgroundImage = Image.FromFile("block.png");
+
             if (tag.Equals("platform"))
             {
-                BackColor = Color.Brown;
+                BackgroundImage = Image.FromFile("block.png");
+            }
+            else if (tag.Equals("edge"))
+            {
+                BackgroundImage = Image.FromFile("wall.png");
             }
             else
             {
-                BackColor = Color.Black;
+                BackgroundImage = Image.FromFile("ground.png");
             }
         }
     }
