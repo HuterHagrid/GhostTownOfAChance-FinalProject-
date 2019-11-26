@@ -121,7 +121,15 @@ namespace PlatformGame2
                 jumping = true;
                 onPlatform = false;
                 currentPlatform = null;
-                player.Image = Image.FromFile("jump_right.png");
+
+                if (goLeft && !onPlatform)
+                {
+                    player.Image = Image.FromFile("jump_left.png");
+                }
+                else if (goRight && !onPlatform)
+                {
+                    player.Image = Image.FromFile("jump_right.png");
+                }
             }
         }
 
@@ -144,10 +152,15 @@ namespace PlatformGame2
             }
         }
 
+        public void UpdateImage()
+        {
+
+        }
+
         // Game timer that determines player movement and collisions
         private void timer_Tick(object sender, System.EventArgs e)
         {
-            // If player is not on a platform, apply jumpspedd
+            // If player is not on a platform, apply jumpspeed
             if (!onPlatform)
             {
                 player.Top += jumpSpeed;
@@ -292,7 +305,7 @@ namespace PlatformGame2
                     foreach (Control y in this.Controls)
                     {
                         // If barrel is not on a platform or another barrel
-                        if (!temp.onPlatform && !(y is Barrel))
+                        if (!temp.OnPlatform && !(y is Barrel))
                         {
                             // If barrel intersects with a platform or floo,
                             // set it as the platform that it is on.
@@ -301,6 +314,19 @@ namespace PlatformGame2
                             {
                                 Platform temp2 = (Platform)y;
                                 temp.platform = temp2;
+                            }
+                        }
+
+                        // Reverse the barrel direction if it hits an edge
+                        if (y.Tag.Equals("edge") && temp.Bounds.IntersectsWith(y.Bounds))
+                        {
+                            if (temp.GoingLeft)
+                            {
+                                temp.GoingLeft = false;
+                            }
+                            else
+                            {
+                                temp.GoingLeft = true;
                             }
                         }
                     }

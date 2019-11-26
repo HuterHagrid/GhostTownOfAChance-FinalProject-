@@ -5,21 +5,21 @@ namespace PlatformGame2
     {
         private const int SPEED = 5;
 
-        public bool onPlatform { set; get; }
+        public bool OnPlatform { set; get; }
 
-        private bool left;
+        public bool GoingLeft { set; get; }
 
         public Platform platform { set; get; }
 
         public Barrel(int locX, int locY, bool left) : base(locX, locY, "barrel")
         {
-            this.left = left;
-            onPlatform = false;
+            this.GoingLeft = left;
+            OnPlatform = false;
         }
 
         public override void Movement()
         {
-            if (left)
+            if (GoingLeft)
             {
                 Left -= SPEED;
             }
@@ -30,14 +30,14 @@ namespace PlatformGame2
 
             if (platform != null)
             {
-                onPlatform = true;
+                OnPlatform = true;
                 if (Right < platform.Left || Left > platform.Right)
                 {
-                    onPlatform = false;
+                    OnPlatform = false;
                 }
             }
 
-            if (!onPlatform)
+            if (!OnPlatform)
             {
                 Top += SPEED;
             }
