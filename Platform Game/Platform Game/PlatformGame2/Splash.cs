@@ -13,7 +13,7 @@ namespace PlatformGame2
         private void playGameButton_Click(object sender, EventArgs e)
         {
             Hide();
-            Level2 level1 = new Level2(0, 10);
+            Level3 level1 = new Level3(0, 10);
             level1.Closed += (s, args) => this.Close();
             level1.Show();
         }

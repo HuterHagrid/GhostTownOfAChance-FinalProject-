@@ -22,10 +22,12 @@ namespace PlatformGame2
             if (GoingLeft)
             {
                 Left -= SPEED;
+                Image = Image.FromFile("barrelRight.gif");
             }
             else
             {
                 Left += SPEED;
+                Image = Image.FromFile("barrelLeft.gif");
             }
 
             if (platform != null)
