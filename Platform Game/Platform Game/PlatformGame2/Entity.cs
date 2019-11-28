@@ -22,7 +22,7 @@ namespace PlatformGame2
             else if (tag.Equals("heart"))
             {
                 Size = new Size(20, 20);
-                BackColor = Color.Red;
+                Image = Image.FromFile("lifeHeart.png");
             }
             else if (tag.Equals("exit"))
             {
