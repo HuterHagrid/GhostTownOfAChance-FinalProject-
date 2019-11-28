@@ -44,6 +44,7 @@ namespace PlatformGame2
                         if (x++ < MAX)
                         {
                             Left -= STEP;
+                            Image = Image.FromFile("ghostLeft.gif");
                         }
                         else
                         {
@@ -56,6 +57,7 @@ namespace PlatformGame2
                         if (x-- > 0)
                         {
                             Left += STEP;
+                            Image = Image.FromFile("ghostRight.gif");
                         }
                         else
                         {
@@ -99,6 +101,7 @@ namespace PlatformGame2
                 {
                     if (x++ < MAX * 2)
                     {
+                        Image = Image.FromFile("ghostLeft.gif");
                         Left -= STEP / 2;
                     }
                     else
@@ -110,6 +113,7 @@ namespace PlatformGame2
                 {
                     if (x-- > 0)
                     {
+                        Image = Image.FromFile("ghostRight.gif");
                         Left += STEP / 2;
                     }
                     else

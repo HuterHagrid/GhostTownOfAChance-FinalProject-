@@ -7,8 +7,6 @@ namespace PlatformGame2
         {
             Text += ": Level 3";
 
-            
-            
             Platform plat1 = new Platform(10, 35 * JS, 950, 10, "platform");
             Controls.Add(plat1);
             Platform plat2 = new Platform(10, 28 * JS, 300, 10, "platform");
@@ -39,7 +37,7 @@ namespace PlatformGame2
             Entity exit = new Entity(100, 250, "exit");
             Controls.Add(exit);
 
-            // These will be moved to other levels, this shows they work
+            // BArrels
             Barrel barrel1 = new Barrel(600, 500, true);
             Controls.Add(barrel1);
             Barrel barrel2 = new Barrel(800, 500, true);
@@ -85,11 +83,11 @@ namespace PlatformGame2
         {
             this.SuspendLayout();
             // 
-            // Level2
+            // Level3
             // 
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(292, 268);
-            this.Name = "Level2";
+            this.Name = "Level3";
             this.ResumeLayout(false);
 
         }
