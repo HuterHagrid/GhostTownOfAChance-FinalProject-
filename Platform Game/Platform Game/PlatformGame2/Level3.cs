@@ -1,11 +1,14 @@
-﻿
+﻿using System.Windows.Forms;
+
 namespace PlatformGame2
 {
     class Level3 : CustomForm
     {
-        public Level3(int score, int lives) : base(score, lives)
+        public Level3(int score, int lives, Splash splash) : base(score, lives, splash)
         {
             Text += ": Level 3";
+
+            SplashHold = splash;
 
             Platform plat1 = new Platform(10, 35 * JS, 950, 10, "platform");
             Controls.Add(plat1);
@@ -69,14 +72,10 @@ namespace PlatformGame2
 
         public override void Next()
         {
-            Close();
-            
-            // When Level 4 is addded change to:
-
-            // Hide();
-            // Level4 level4 = new Level4(GetScore(), GetLives());
-            // level4.Closed += (s, args) => this.Close();
-            // level4.Show();
+            Hide();
+            Level4 level4 = new Level4(GetScore(), GetLives(), SplashHold);
+            level4.Closed += (s, args) => this.Close();
+            level4.Show();
         }
 
         private void InitializeComponent()

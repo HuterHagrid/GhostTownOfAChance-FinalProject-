@@ -31,11 +31,14 @@ namespace PlatformGame2
         // Game Timer
         private Timer timer;
 
+        // Splash Holder
+        public Splash SplashHold { set; get; }
+
         private System.ComponentModel.IContainer components;
 
         public CustomForm() { }
         
-        public CustomForm(int score, int lives)
+        public CustomForm(int score, int lives, Splash splash)
         {
             InitializeComponent();
 
@@ -152,11 +155,6 @@ namespace PlatformGame2
             }
         }
 
-        public void UpdateImage()
-        {
-
-        }
-
         // Game timer that determines player movement and collisions
         private void timer_Tick(object sender, System.EventArgs e)
         {
@@ -242,7 +240,7 @@ namespace PlatformGame2
 
                 // Player landing on platform check
                 if (x.Tag.Equals("platform") && player.Right > x.Left && player.Left < x.Right
-                        && (player.Bottom <= x.Top && player.Bottom > x.Top - JS) && !jumping)
+                        && (player.Bottom <= x.Top && player.Bottom >= x.Top - JS) && !jumping)
                 {
                     force = 8;
                     player.Top = x.Top - player.Height;
@@ -277,6 +275,10 @@ namespace PlatformGame2
                         onPlatform = false;
                         UpdateScore(-10);
                         UpdateLives(-1);
+                        if (GetLives() == 0)
+                        {
+                            End();
+                        }
                     }
                 }
 
@@ -289,6 +291,10 @@ namespace PlatformGame2
                     onPlatform = false;
                     UpdateScore(-10);
                     UpdateLives(-1);
+                    if (GetLives() == 0)
+                    {
+                        End();
+                    }
                 }
 
                 // Update Enemy movements
@@ -356,6 +362,24 @@ namespace PlatformGame2
         // Determines the Next level to go to
         public virtual void Next() { }
 
+        // Ends the game if player loses all lives
+        // If player has a high score, they can enter their name to the leaderboard
+        public void End()
+        {
+            // Go back to splash screen
+            Hide();
+            SplashHold.ResetMusic();
+            SplashHold.Show();
+
+            // Check if player score is good enough for leaderboard
+            HighScores hs = new HighScores();
+            if (hs.Worthy(GetScore()))
+            {
+                // Initiate high score prompt
+                Prompt prompt = new Prompt(GetScore(), SplashHold);
+            }
+        }
+
         // Creates a Label for a stat keeper
         public Label labelMaker()
         {
@@ -372,7 +396,6 @@ namespace PlatformGame2
         {
             return score;
         }
-
         public int GetLives()
         {
             return lives;
@@ -384,7 +407,6 @@ namespace PlatformGame2
             score += num;
             scoreKeep.Text = score.ToString();
         }
-
         public void UpdateLives(int num)
         {
             lives += num;

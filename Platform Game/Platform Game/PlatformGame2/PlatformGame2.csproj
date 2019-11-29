@@ -58,6 +58,8 @@
     <Compile Include="Ghost.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="HighScore.cs" />
+    <Compile Include="HighScores.cs" />
     <Compile Include="Level1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +70,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Level2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Level5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prompt.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Splash.cs">
@@ -101,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Level2.resx">
       <DependentUpon>Level2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prompt.resx">
+      <DependentUpon>Prompt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
