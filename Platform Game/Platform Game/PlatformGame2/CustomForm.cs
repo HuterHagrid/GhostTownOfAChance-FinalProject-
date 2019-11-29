@@ -31,11 +31,14 @@ namespace PlatformGame2
         // Game Timer
         private Timer timer;
 
+        // Splash Holder
+        public Splash SplashHold { set; get; }
+
         private System.ComponentModel.IContainer components;
 
         public CustomForm() { }
         
-        public CustomForm(int score, int lives)
+        public CustomForm(int score, int lives, Splash splash)
         {
             InitializeComponent();
 
@@ -150,11 +153,6 @@ namespace PlatformGame2
             {
                 jumping = false;
             }
-        }
-
-        public void UpdateImage()
-        {
-
         }
 
         // Game timer that determines player movement and collisions
@@ -277,6 +275,10 @@ namespace PlatformGame2
                         onPlatform = false;
                         UpdateScore(-10);
                         UpdateLives(-1);
+                        if (GetLives() == 0)
+                        {
+                            End();
+                        }
                     }
                 }
 
@@ -289,6 +291,10 @@ namespace PlatformGame2
                     onPlatform = false;
                     UpdateScore(-10);
                     UpdateLives(-1);
+                    if (GetLives() == 0)
+                    {
+                        End();
+                    }
                 }
 
                 // Update Enemy movements
@@ -355,6 +361,14 @@ namespace PlatformGame2
 
         // Determines the Next level to go to
         public virtual void Next() { }
+
+        // Ends the game if player loses all lives
+        public void End()
+        {
+            SplashHold.ResetMusic();
+            Hide();
+            SplashHold.Show();
+        }
 
         // Creates a Label for a stat keeper
         public Label labelMaker()

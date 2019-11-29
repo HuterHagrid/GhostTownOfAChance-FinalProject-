@@ -36,3 +36,5 @@ C:\Users\w7123100\Desktop\GitHub\GhostTownOfAChance-FinalProject-\Platform Game\
 C:\Users\w7123100\Desktop\GitHub\GhostTownOfAChance-FinalProject-\Platform Game\Platform Game\PlatformGame2\obj\Debug\PlatformGame2.pdb
 C:\Users\w7123100\Desktop\GitHub\GhostTownOfAChance-FinalProject-\Platform Game\Platform Game\PlatformGame2\obj\Debug\PlatformGame2.Level3.resources
 C:\Users\w7123100\Desktop\GitHub\GhostTownOfAChance-FinalProject-\Platform Game\Platform Game\PlatformGame2\obj\Debug\PlatformGame2.Level4.resources
+C:\Users\w7269699\Source\Repos\FukawaCarl155\GhostTownOfAChance-FinalProject-\Platform Game\Platform Game\PlatformGame2\obj\Debug\PlatformGame2.Level4.resources
+C:\Users\w7269699\Source\Repos\FukawaCarl155\GhostTownOfAChance-FinalProject-\Platform Game\Platform Game\PlatformGame2\obj\Debug\PlatformGame2.Level3.resources

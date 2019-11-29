@@ -1,11 +1,14 @@
-﻿
+﻿using System.Windows.Forms;
+
 namespace PlatformGame2
 {
     class Level4 : CustomForm
     {
-        public Level4(int score, int lives) : base(score, lives)
+        public Level4(int score, int lives, Splash splash) : base(score, lives, splash)
         {
             Text += ": Level 4";
+
+            SplashHold = splash;
 
             Platform plat1 = new Platform(10, 35 * JS, 950, 10, "platform");
             Controls.Add(plat1);
@@ -21,7 +24,7 @@ namespace PlatformGame2
             Entity exit = new Entity(100, 250, "exit");
             Controls.Add(exit);
 
-            // BArrels
+            // Barrels
             Barrel barrel1 = new Barrel(600, 500, true);
             Controls.Add(barrel1);
             
@@ -41,25 +44,21 @@ namespace PlatformGame2
 
         public override void Next()
         {
-            Close();
-            
-            // When Level 5 is addded change to:
-
-            // Hide();
-            // Level5 level5 = new Level5(GetScore(), GetLives());
-            // level5.Closed += (s, args) => this.Close();
-            // level5.Show();
+            Hide();
+            Level5 level5 = new Level5(GetScore(), GetLives(), SplashHold);
+            level5.Closed += (s, args) => this.Close();
+            level5.Show();
         }
 
         private void InitializeComponent()
         {
             this.SuspendLayout();
             // 
-            // Level3
+            // Level4
             // 
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(292, 268);
-            this.Name = "Level3";
+            this.Name = "Level4";
             this.ResumeLayout(false);
 
         }
