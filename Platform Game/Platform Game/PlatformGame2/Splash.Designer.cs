@@ -36,8 +36,8 @@
             // 
             // playGameButton
             // 
-            this.playGameButton.BackColor = System.Drawing.Color.White;
-            this.playGameButton.Location = new System.Drawing.Point(427, 272);
+            this.playGameButton.BackColor = System.Drawing.Color.Red;
+            this.playGameButton.Location = new System.Drawing.Point(428, 266);
             this.playGameButton.Name = "playGameButton";
             this.playGameButton.Size = new System.Drawing.Size(120, 32);
             this.playGameButton.TabIndex = 0;
@@ -47,8 +47,8 @@
             // 
             // quitButton
             // 
-            this.quitButton.BackColor = System.Drawing.Color.White;
-            this.quitButton.Location = new System.Drawing.Point(427, 320);
+            this.quitButton.BackColor = System.Drawing.Color.Red;
+            this.quitButton.Location = new System.Drawing.Point(428, 314);
             this.quitButton.Name = "quitButton";
             this.quitButton.Size = new System.Drawing.Size(120, 32);
             this.quitButton.TabIndex = 1;
@@ -58,9 +58,11 @@
             // 
             // highScoresRichTextBox
             // 
-            this.highScoresRichTextBox.Location = new System.Drawing.Point(406, 375);
+            this.highScoresRichTextBox.BackColor = System.Drawing.Color.Yellow;
+            this.highScoresRichTextBox.Enabled = false;
+            this.highScoresRichTextBox.Location = new System.Drawing.Point(398, 377);
             this.highScoresRichTextBox.Name = "highScoresRichTextBox";
-            this.highScoresRichTextBox.Size = new System.Drawing.Size(158, 208);
+            this.highScoresRichTextBox.Size = new System.Drawing.Size(174, 210);
             this.highScoresRichTextBox.TabIndex = 2;
             this.highScoresRichTextBox.Text = "";
             // 
