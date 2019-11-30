@@ -37,7 +37,9 @@ namespace PlatformGame2
         private System.ComponentModel.IContainer components;
 
         public CustomForm() { }
-        
+
+        public System.Media.SoundPlayer sfxPlayer;
+
         public CustomForm(int score, int lives, Splash splash)
         {
             InitializeComponent();
@@ -122,6 +124,8 @@ namespace PlatformGame2
             if (e.KeyCode == Keys.Space && !jumping)
             {
                 jumping = true;
+                sfxPlayer = new System.Media.SoundPlayer("jump.wav");
+                sfxPlayer.Play();
                 onPlatform = false;
                 currentPlatform = null;
 
@@ -222,14 +226,16 @@ namespace PlatformGame2
                     {
                         UpdateScore(10);
                         x.Dispose();
+                        sfxPlayer = new System.Media.SoundPlayer("Coin.wav");
+                        sfxPlayer.Play();
                     }
                     // Player collects a heart
                     if (x.Tag.Equals("heart"))
                     {
                         UpdateLives(1);
                         x.Dispose();
-                        System.Media.SoundPlayer player = new System.Media.SoundPlayer("getItem.wav");
-                        player.Play();
+                        sfxPlayer = new System.Media.SoundPlayer("getItem.wav");
+                        sfxPlayer.Play();
                     }
                     // Player reaches the exit
                     if (x.Tag.Equals("exit"))
