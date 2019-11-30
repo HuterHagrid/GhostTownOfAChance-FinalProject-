@@ -44,7 +44,7 @@ namespace PlatformGame2
 
             // Hide the splash and open level
             Hide();
-            Level1 level1 = new Level1(0, 10, this);
+            Level2 level1 = new Level2(0, 5, this);
             // Adds closing function to the level to close all windows
             level1.Closed += (s, args) => this.Close();
             level1.Show();

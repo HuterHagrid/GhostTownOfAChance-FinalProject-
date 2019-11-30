@@ -12,11 +12,11 @@ namespace PlatformGame2
             SplashHold = splash;
 
             // First row of Turtles
-            Turtle turtle1 = new Turtle(300, 670, false);
+            Turtle turtle1 = new Turtle(300, 679, false);
             Controls.Add(turtle1);
-            Turtle turtle2 = new Turtle(500, 670, true);
+            Turtle turtle2 = new Turtle(500, 679, true);
             Controls.Add(turtle2);
-            Turtle turtle7 = new Turtle(600, 670, false);
+            Turtle turtle7 = new Turtle(600, 679, false);
             Controls.Add(turtle7);
 
             // Lower platforms
@@ -47,27 +47,45 @@ namespace PlatformGame2
             Controls.Add(turtle4);
 
             // Upper platforms
-            Platform plat4 = new Platform(170, 23 * JS, 100, 10, "platform");
+            Platform plat4 = new Platform(50, 35 * JS, 150, 10, "platform");
             Controls.Add(plat4);
-            Platform plat5 = new Platform(100, 17 * JS, 100, 10, "platform");
+            Platform plat5 = new Platform(50, 30 * JS, 100, 10, "platform");
             Controls.Add(plat5);
-            Platform plat6 = new Platform(250, 11 * JS, 600, 10, "platform");
+            Platform plat7 = new Platform(50, 24 * JS, 100, 10, "platform");
+            Controls.Add(plat7);
+            Platform plat8 = new Platform(50, 18 * JS, 200, 10, "platform");
+            Controls.Add(plat8);
+            Platform plat6 = new Platform(250, 11 * JS, 200, 10, "platform");
             Controls.Add(plat6);
+            Platform plat9 = new Platform(500, 18 * JS, 200, 10, "platform");
+            Controls.Add(plat9);
+            Platform plat10 = new Platform(750, 13 * JS, 150, 10, "platform");
+            Controls.Add(plat10);
 
             // Upper coins
-            Entity coin4 = new Entity(210, 320, "coin");
+            Entity coin4 = new Entity(90, 425, "coin");
             Controls.Add(coin4);
-            Entity coin5 = new Entity(140, 230, "coin");
+            Entity coin5 = new Entity(90, 325, "coin");
             Controls.Add(coin5);
+            Entity coin7 = new Entity(330, 110, "coin");
+            Controls.Add(coin7);
+            Entity coin8 = new Entity(600, 210, "coin");
+            Controls.Add(coin8);
+
+            // Left side turtles
+            Turtle turtle8 = new Turtle(160, 510, true);
+            Controls.Add(turtle8);
+            Turtle turtle9 = new Turtle(100, 255, false);
+            Controls.Add(turtle9);
 
             // Top row of turtles
             Turtle turtle5 = new Turtle(300, 150, false);
             Controls.Add(turtle5);
-            Turtle turtle6 = new Turtle(600, 150, true);     
+            Turtle turtle6 = new Turtle(650, 255, true);     
             Controls.Add(turtle6);
 
             // Exit
-            Entity exit = new Entity(740, 137, "exit");
+            Entity exit = new Entity(840, 170, "exit");
             Controls.Add(exit);
         }
 
@@ -75,8 +93,9 @@ namespace PlatformGame2
         {
             Hide();
             Level3 level3 = new Level3(GetScore(), GetLives(), SplashHold);
-            level3.Closed += (s, args) => this.Close();
+            level3.Closed += (s, args) => SplashHold.Close();
             level3.Show();
+            Dispose();
         }
 
         private void InitializeComponent()
