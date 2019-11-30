@@ -12,11 +12,11 @@ namespace PlatformGame2
             SplashHold = splash;
 
             // First row of Turtles
-            Turtle turtle1 = new Turtle(300, 680, false);
+            Turtle turtle1 = new Turtle(300, 670, false);
             Controls.Add(turtle1);
-            Turtle turtle2 = new Turtle(500, 680, true);
+            Turtle turtle2 = new Turtle(500, 670, true);
             Controls.Add(turtle2);
-            Turtle turtle7 = new Turtle(600, 680, false);
+            Turtle turtle7 = new Turtle(600, 670, false);
             Controls.Add(turtle7);
 
             // Lower platforms

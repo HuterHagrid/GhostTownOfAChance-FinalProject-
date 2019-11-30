@@ -228,6 +228,8 @@ namespace PlatformGame2
                     {
                         UpdateLives(1);
                         x.Dispose();
+                        System.Media.SoundPlayer player = new System.Media.SoundPlayer("getItem.wav");
+                        player.Play();
                     }
                     // Player reaches the exit
                     if (x.Tag.Equals("exit"))
