@@ -67,9 +67,8 @@ namespace PlatformGame2
         {
             Hide();
             Level2 level2 = new Level2(GetScore(), GetLives(), SplashHold);
-            level2.Closed += (s, args) => SplashHold.Close();
+            level2.Closed += (s, args) => this.Close();
             level2.Show();
-            Dispose();
         }
 
         private void InitializeComponent()

@@ -173,11 +173,11 @@ namespace PlatformGame2
             // Left and right movements
             if (goLeft)
             {
-                player.Left -= 5;
+                player.Left -= 6;
             }
             else if (goRight)
             {
-                player.Left += 5;
+                player.Left += 6;
             }
 
             // When jumping, apply negative jumpspeed and force
@@ -204,18 +204,6 @@ namespace PlatformGame2
                         force = 8;
                         player.Top = x.Top - player.Height;
                         onPlatform = true;
-                        if (goLeft)
-                        {
-                            player.Image = Image.FromFile("run_left.gif");
-                        }
-                        else if (goRight)
-                        {
-                            player.Image = Image.FromFile("run_right.gif");
-                        }
-                        else
-                        {
-                            player.Image = Image.FromFile("stand_right.png");
-                        }
                     }
                     // Player cannot go through edges
                     if (x.Tag.Equals("edge"))
@@ -240,6 +228,8 @@ namespace PlatformGame2
                     {
                         UpdateLives(1);
                         x.Dispose();
+                        System.Media.SoundPlayer player = new System.Media.SoundPlayer("getItem.wav");
+                        player.Play();
                     }
                     // Player reaches the exit
                     if (x.Tag.Equals("exit"))
@@ -258,18 +248,6 @@ namespace PlatformGame2
                     player.Top = x.Top - player.Height;
                     onPlatform = true;
                     currentPlatform = (Platform)x;
-                    if (goLeft)
-                    {
-                        player.Image = Image.FromFile("run_left.gif");
-                    }
-                    else if (goRight)
-                    {
-                        player.Image = Image.FromFile("run_right.gif");
-                    }
-                    else
-                    {
-                        player.Image = Image.FromFile("stand_right.png");
-                    }
                 }
 
                 // Player landing on a turtle of barrel, or getting hit by them
@@ -402,7 +380,6 @@ namespace PlatformGame2
                 // Initiate high score prompt
                 Prompt prompt = new Prompt(GetScore(), SplashHold);
             }
-            Dispose();
         }
 
         // Creates a Label for a stat keeper
