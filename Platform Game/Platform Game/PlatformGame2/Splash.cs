@@ -14,14 +14,11 @@ namespace PlatformGame2
 
             // Update the high scores and play splash music
             UpdateHS();
-            sp = new System.Media.SoundPlayer(@"Fastest Gun in the 8-bit West.wav");
-            sp.PlayLooping();
+            ResetMusic();
         }
 
         public void ResetMusic()
         {
-            // Stop other music, start playing splash music
-            sp.Stop();
             sp = new System.Media.SoundPlayer(@"Fastest Gun in the 8-bit West.wav");
             sp.PlayLooping();
         }
@@ -38,13 +35,10 @@ namespace PlatformGame2
         {
             // Stop the splash music and start playing the game music
             sp.Stop();
-            sp = new System.Media.SoundPlayer
-                (@"Stayin' Alive (8 Bit Cover Version) _Tribute to Bee Gees_ - 8 Bit Universe.wav");
-            sp.PlayLooping();
 
             // Hide the splash and open level
             Hide();
-            Level1 level1 = new Level1(0, 10, this);
+            Level2 level1 = new Level2(0, 5, this);
             // Adds closing function to the level to close all windows
             level1.Closed += (s, args) => this.Close();
             level1.Show();
