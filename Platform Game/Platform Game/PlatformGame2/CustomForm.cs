@@ -290,6 +290,9 @@ namespace PlatformGame2
                         if (x.Tag.Equals("turtle"))
                         {
                             UpdateScore(15);
+                            //x.Image = Image.FromFile("turtleDeath.png");
+                            sfxPlayer = new System.Media.SoundPlayer("turtledie.wav");
+                            sfxPlayer.Play();
                         }
                         else
                         {

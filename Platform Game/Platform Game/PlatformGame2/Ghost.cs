@@ -1,5 +1,11 @@
 ﻿using System.Drawing;
-
+/// <summary>
+/// Ghost.cs
+/// 
+/// This class file details the function of the Ghost enemy.
+/// Variables: MAX, STEP, x, y, goLeft goUp, moveX, Box
+/// Methods: Constructor, movement
+/// </summary>
 namespace PlatformGame2
 {
     class Ghost : Enemy

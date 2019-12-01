@@ -1,6 +1,11 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
-
+/// <summary>
+/// Entity.cs
+/// 
+/// This class file sets up the different elements in the CustomForm window of gameplay
+/// Methods: Constructor
+/// </summary>
 namespace PlatformGame2
 {
     class Entity : PictureBox

@@ -1,4 +1,11 @@
 ﻿using System.Drawing;
+/// <summary>
+/// Barrel.cs
+/// 
+/// This class file details the function of the turtle enemy.
+/// Variables: SPEED, OnPlatform, GoingLeft, platform
+/// Methods: Constructor, movement
+/// </summary>
 namespace PlatformGame2
 {
     class Barrel : Enemy
