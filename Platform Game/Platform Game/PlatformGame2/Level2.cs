@@ -17,11 +17,11 @@ namespace PlatformGame2
             SplashHold = splash;
 
             // First row of Turtles
-            Turtle turtle1 = new Turtle(300, 679, false);
+            Turtle turtle1 = new Turtle(300, 655, false);
             Controls.Add(turtle1);
-            Turtle turtle2 = new Turtle(500, 679, true);
+            Turtle turtle2 = new Turtle(500, 655, true);
             Controls.Add(turtle2);
-            Turtle turtle7 = new Turtle(600, 679, false);
+            Turtle turtle7 = new Turtle(600, 655, false);
             Controls.Add(turtle7);
 
             // Lower platforms
@@ -42,7 +42,7 @@ namespace PlatformGame2
             Entity coin3 = new Entity(890, 485, "coin");
             Controls.Add(coin3);
 
-            Entity heart1 = new Entity(880, 665, "heart");
+            Entity heart1 = new Entity(880, 655, "heart");
             Controls.Add(heart1);
 
             // Second row of Turtles
