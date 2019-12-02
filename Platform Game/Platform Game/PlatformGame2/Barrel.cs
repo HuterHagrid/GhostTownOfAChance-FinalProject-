@@ -10,20 +10,21 @@ namespace PlatformGame2
 {
     class Barrel : Enemy
     {
+        //constant variable
         private const int SPEED = 5;
-
+        
+        //properties
         public bool OnPlatform { set; get; }
-
         public bool GoingLeft { set; get; }
-
         public Platform platform { set; get; }
-
+        
+        //full constructor
         public Barrel(int locX, int locY, bool left) : base(locX, locY, "barrel")
         {
             this.GoingLeft = left;
             OnPlatform = false;
         }
-
+        //movement method
         public override void Movement()
         {
             if (GoingLeft)

@@ -10,11 +10,13 @@ namespace PlatformGame2
 {
     class Ghost : Enemy
     {
+        //constant variables
         private const int MAX = 40;
         private const int STEP = 4;
         
+        //properties
         public bool Box { set; get; }
-
+        //class variables
         private int x;
         private int y;
 
@@ -22,6 +24,7 @@ namespace PlatformGame2
         private bool goLeft;
         private bool goUp;
 
+        //full constructor
         public Ghost(int locX, int locY, bool box) : base(locX, locY, "ghost")
         {
             Box = box;
@@ -39,6 +42,7 @@ namespace PlatformGame2
             goUp = true;
         }
 
+        //movement method
         public override void Movement()
         {
             if (Box)

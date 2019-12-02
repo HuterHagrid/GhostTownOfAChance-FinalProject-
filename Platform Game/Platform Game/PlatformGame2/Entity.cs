@@ -4,12 +4,13 @@ using System.Windows.Forms;
 /// Entity.cs
 /// 
 /// This class file sets up the different elements in the CustomForm window of gameplay
-/// Methods: Constructor
+/// Methods: Full Constructor
 /// </summary>
 namespace PlatformGame2
 {
     class Entity : PictureBox
     {
+        //Full Constructor
         public Entity(int locX, int locY, string tag)
         {
             Location = new Point(locX, locY);

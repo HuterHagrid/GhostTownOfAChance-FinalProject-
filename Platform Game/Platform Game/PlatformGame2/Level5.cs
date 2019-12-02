@@ -10,7 +10,8 @@ namespace PlatformGame2
 
             SplashHold = splash;
 
-            
+            Platform plat1 = new Platform(10, 38 * JS, 1000, 10, "platform");
+            Controls.Add(plat1);
 
 
         }
