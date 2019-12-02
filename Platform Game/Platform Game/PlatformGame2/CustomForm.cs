@@ -47,12 +47,14 @@ namespace PlatformGame2
         // Splash Holder
         public Splash SplashHold { set; get; }
 
+        // Look Left (for player sprite to face left)
         private bool lookLeft;
 
         private System.ComponentModel.IContainer components;
 
         public CustomForm() { }
 
+        // SoundPlayer object for audio effects in game.
         public System.Media.SoundPlayer sfxPlayer;
 
         // Constructor
@@ -96,6 +98,7 @@ namespace PlatformGame2
             Controls.Add(bottom);
         }
 
+        // Initialize window's functions (both splash screen and levels)
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();

@@ -1,5 +1,11 @@
 ﻿using System.Windows.Forms;
-
+/// <summary>
+/// Level5.cs
+/// 
+/// Level 5 is the final level, with all three enemy types present
+/// Methods: Constructor, Next
+/// </summary>
+///
 namespace PlatformGame2
 {
     class Level5 : CustomForm

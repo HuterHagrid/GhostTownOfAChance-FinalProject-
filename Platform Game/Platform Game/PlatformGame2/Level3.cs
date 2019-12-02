@@ -118,7 +118,7 @@ namespace PlatformGame2
             Entity exit = new Entity(50, 75, "exit");
             Controls.Add(exit);
         }
-
+        //begin level 4
         public override void Next()
         {
             Hide();
@@ -127,7 +127,7 @@ namespace PlatformGame2
             level4.Show();
             Dispose();
         }
-
+        // set up and begin level's objects
         private void InitializeComponent()
         {
             this.SuspendLayout();

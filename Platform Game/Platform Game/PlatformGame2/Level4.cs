@@ -2,7 +2,7 @@
 /// <summary>
 /// Level4.cs
 /// 
-/// Level 4 is the final level. Ghosts are added and all enemies are present.
+/// Level 4 is the penultimate level. Ghosts are added and all enemies are present.
 /// Methods: Constructor, Next
 /// </summary>
 
@@ -117,12 +117,16 @@ namespace PlatformGame2
 
 
         }
-
+        // begin level 5
         public override void Next()
         {
-            End();
+            Hide();
+            Level5 level5 = new Level5(GetScore(), GetLives(), SplashHold);
+            level5.Closed += (s, args) => SplashHold.Close();
+            level5.Show();
+            Dispose();
         }
-
+        // set up and begin level's objects
         private void InitializeComponent()
         {
             this.SuspendLayout();
