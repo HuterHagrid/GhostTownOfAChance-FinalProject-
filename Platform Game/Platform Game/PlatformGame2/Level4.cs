@@ -16,6 +16,7 @@ namespace PlatformGame2
 
             SplashHold = splash;
 
+            // Platforms
             Platform plat1 = new Platform(10, 39 * JS, 50, 10, "platform");
             Controls.Add(plat1);
             Platform plat2 = new Platform(10, 31 * JS, 80, 10, "platform");
@@ -55,7 +56,7 @@ namespace PlatformGame2
             Platform plat16 = new Platform(50, 20 * JS, 100, 10, "platform");
             Controls.Add(plat16);
 
-            //coins + heart
+            // Coins and heart
             Entity coin1 = new Entity(580, 505, "coin");
             Controls.Add(coin1);
             Entity coin2 = new Entity(570, 505, "coin");
@@ -69,7 +70,7 @@ namespace PlatformGame2
             Entity heart = new Entity(850, 360, "heart");
             Controls.Add(heart);
 
-            // exit
+            // Exit
             Entity exit = new Entity(100, 250, "exit");
             Controls.Add(exit);
 
@@ -91,7 +92,7 @@ namespace PlatformGame2
             Barrel barrel8 = new Barrel(630, 650, true);
             Controls.Add(barrel8);
 
-            //Ghosts
+            // Ghosts
             Ghost ghost1 = new Ghost(250, 580, false);
             Controls.Add(ghost1);
             Ghost ghost2 = new Ghost(500, 580, false);
@@ -109,7 +110,7 @@ namespace PlatformGame2
             Ghost ghost8 = new Ghost(600, 200, false);
             Controls.Add(ghost8);
 
-            //turtles
+            // Turtles
             Turtle turtle1 = new Turtle(480, 524, false);
             Controls.Add(turtle1);
             Turtle turtle2 = new Turtle(660, 524, false);
@@ -117,7 +118,8 @@ namespace PlatformGame2
 
 
         }
-        // begin level 5
+
+        // Begin level 5
         public override void Next()
         {
             Hide();
@@ -126,7 +128,8 @@ namespace PlatformGame2
             level5.Show();
             Dispose();
         }
-        // set up and begin level's objects
+
+        // Set up and begin level's objects
         private void InitializeComponent()
         {
             this.SuspendLayout();

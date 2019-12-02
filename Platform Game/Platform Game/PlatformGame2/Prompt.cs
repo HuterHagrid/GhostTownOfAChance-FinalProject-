@@ -88,9 +88,9 @@ namespace PlatformGame2
             // messageLabel
             // 
             this.messageLabel.AutoSize = true;
-            this.messageLabel.Location = new System.Drawing.Point(31, 28);
+            this.messageLabel.Location = new System.Drawing.Point(55, 27);
             this.messageLabel.Name = "messageLabel";
-            this.messageLabel.Size = new System.Drawing.Size(247, 20);
+            this.messageLabel.Size = new System.Drawing.Size(167, 13);
             this.messageLabel.TabIndex = 0;
             this.messageLabel.Text = "Congratulations! New High Score!";
             // 
@@ -99,7 +99,7 @@ namespace PlatformGame2
             this.nameLabel.AutoSize = true;
             this.nameLabel.Location = new System.Drawing.Point(55, 66);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(59, 20);
+            this.nameLabel.Size = new System.Drawing.Size(41, 13);
             this.nameLabel.TabIndex = 1;
             this.nameLabel.Text = "Name: ";
             // 
@@ -108,7 +108,7 @@ namespace PlatformGame2
             this.scoreLabel.AutoSize = true;
             this.scoreLabel.Location = new System.Drawing.Point(55, 108);
             this.scoreLabel.Name = "scoreLabel";
-            this.scoreLabel.Size = new System.Drawing.Size(59, 20);
+            this.scoreLabel.Size = new System.Drawing.Size(41, 13);
             this.scoreLabel.TabIndex = 2;
             this.scoreLabel.Text = "Score: ";
             // 
@@ -116,7 +116,7 @@ namespace PlatformGame2
             // 
             this.nameTextBox.Location = new System.Drawing.Point(112, 63);
             this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(100, 26);
+            this.nameTextBox.Size = new System.Drawing.Size(100, 20);
             this.nameTextBox.TabIndex = 3;
             // 
             // scoreTextBox
@@ -124,7 +124,7 @@ namespace PlatformGame2
             this.scoreTextBox.Enabled = false;
             this.scoreTextBox.Location = new System.Drawing.Point(112, 105);
             this.scoreTextBox.Name = "scoreTextBox";
-            this.scoreTextBox.Size = new System.Drawing.Size(100, 26);
+            this.scoreTextBox.Size = new System.Drawing.Size(100, 20);
             this.scoreTextBox.TabIndex = 4;
             // 
             // enterButton
@@ -139,7 +139,7 @@ namespace PlatformGame2
             // 
             // Prompt
             // 
-            this.ClientSize = new System.Drawing.Size(329, 211);
+            this.ClientSize = new System.Drawing.Size(289, 211);
             this.Controls.Add(this.enterButton);
             this.Controls.Add(this.scoreTextBox);
             this.Controls.Add(this.nameTextBox);

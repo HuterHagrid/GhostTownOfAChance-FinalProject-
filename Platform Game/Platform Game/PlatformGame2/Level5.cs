@@ -15,7 +15,8 @@ namespace PlatformGame2
             Text += ": Level 5";
 
             SplashHold = splash;
-            //platforms
+
+            // Platforms
             Platform plat1 = new Platform(10, 38 * JS, 950, 10, "platform");
             Controls.Add(plat1);
             Platform edge5 = new Platform(500, 30 * JS, 12, 120, "edge");
@@ -47,7 +48,7 @@ namespace PlatformGame2
             Platform edge10 = new Platform(800, 14 * JS, 12, 120, "edge");
             Controls.Add(edge10);
 
-            //barrels
+            // Barrels
             Barrel barrel1 = new Barrel(710, 650, true);
             Controls.Add(barrel1);
             Barrel barrel2 = new Barrel(730, 650, true);
@@ -55,7 +56,7 @@ namespace PlatformGame2
             Barrel barrel3 = new Barrel(750, 650, true);
             Controls.Add(barrel3);
 
-            //ghosts
+            // Ghosts
             Ghost ghost1 = new Ghost(500, 500, true);
             Controls.Add(ghost1);
             Ghost ghost2 = new Ghost(500, 500, false);
@@ -67,7 +68,7 @@ namespace PlatformGame2
             Ghost ghost5 = new Ghost(200, 300, false);
             Controls.Add(ghost5);
 
-            //turtles
+            // Turtles
             Turtle turtle1 = new Turtle(20, 554, false);
             Controls.Add(turtle1);
             Turtle turtle2 = new Turtle(820, 554, false);
@@ -77,11 +78,11 @@ namespace PlatformGame2
             Turtle turtle4 = new Turtle(820, 194, false);
             Controls.Add(turtle4);
 
-            // exit
+            // Exit
             Entity exit = new Entity(500, 61, "exit");
             Controls.Add(exit);
 
-            //coins
+            // Coins
             Entity coin1 = new Entity(900, 180, "coin");
             Controls.Add(coin1);
             Entity coin2 = new Entity(880, 180, "coin");
@@ -114,7 +115,6 @@ namespace PlatformGame2
             Controls.Add(coin15);
             Entity coin16 = new Entity(760, 160, "coin");
             Controls.Add(coin16);
-
             Entity coin17 = new Entity(150, 160, "coin");
             Controls.Add(coin17);
             Entity coin18 = new Entity(130, 160, "coin");
@@ -123,10 +123,6 @@ namespace PlatformGame2
             Controls.Add(coin19);
             Entity coin20 = new Entity(150, 180, "coin");
             Controls.Add(coin20);
-
-
-
-
         }
 
         // Last level, return to splash
