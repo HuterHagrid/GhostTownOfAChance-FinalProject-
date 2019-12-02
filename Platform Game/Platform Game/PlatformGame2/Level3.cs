@@ -1,4 +1,11 @@
 ﻿
+/// <summary>
+/// Level3.cs
+/// 
+/// Level 3 introduces the player to the next enemy, the barrel.
+/// Methods: Constructor, Next
+/// </summary>
+/// 
 namespace PlatformGame2
 {
     class Level3 : CustomForm

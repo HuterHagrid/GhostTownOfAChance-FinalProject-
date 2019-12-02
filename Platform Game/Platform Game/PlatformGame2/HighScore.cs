@@ -1,9 +1,12 @@
 ﻿using System;
-/// Highscore.cs
+
+/// <summary>
+/// HighScore.cs
 /// 
-/// This class creates the components of a highscore object, intended to be part of a list of highscores on the intro screen of the game.
-/// Variables: Name, Score
-/// Methods: Full Constructor, ToString, CompareTo
+/// This class file defines a High Score
+/// Properties: Name, Score
+/// Methods: Constructor, ToString, CompareTo
+/// </summary>
 
 namespace PlatformGame2
 {

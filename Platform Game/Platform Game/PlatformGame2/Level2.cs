@@ -1,8 +1,13 @@
-﻿using System.Windows.Forms;
+﻿
+/// <summary>
+/// Level2.cs
+/// 
+/// Level 2 introduces the player to the first enemy, the turtle.
+/// Methods: Constructor, Next
+/// </summary>
 
 namespace PlatformGame2
 {
-    // Level 2 introduces the player to the first enemy, the turtle.
     class Level2 : CustomForm
     {
         public Level2(int score, int lives, Splash splash) : base(score, lives, splash)

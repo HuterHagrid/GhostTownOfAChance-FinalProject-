@@ -1,11 +1,20 @@
 ﻿using System;
 using System.Windows.Forms;
 
+/// <summary>
+/// Prompt.cs
+/// 
+/// This class file defines the prompt that displays if the user is has a high score.
+/// Variables: newhs, score, splash
+/// Methods: Constructor, EnterButton_Click
+/// </summary>
+
 namespace PlatformGame2
 {
     // Displays a prompt to enter a high score to the leaderboard
     class Prompt : Form
     {
+        // Form components
         private Label messageLabel;
         private Label nameLabel;
         private Label scoreLabel;
@@ -18,6 +27,7 @@ namespace PlatformGame2
         private int score;
         private Splash splash;
 
+        // Constructor
         public Prompt(int score, Splash splashhold)
         {
             InitializeComponent();
@@ -34,7 +44,7 @@ namespace PlatformGame2
         }
 
         // Enters the players name and score to the leaderboard
-        private void enterButton_Click(object sender, EventArgs e)
+        private void EnterButton_Click(object sender, EventArgs e)
         {
             // Gets user input name
             string name = nameTextBox.Text;
@@ -125,7 +135,7 @@ namespace PlatformGame2
             this.enterButton.TabIndex = 5;
             this.enterButton.Text = "Enter";
             this.enterButton.UseVisualStyleBackColor = true;
-            this.enterButton.Click += new System.EventHandler(this.enterButton_Click);
+            this.enterButton.Click += new System.EventHandler(this.EnterButton_Click);
             // 
             // Prompt
             // 

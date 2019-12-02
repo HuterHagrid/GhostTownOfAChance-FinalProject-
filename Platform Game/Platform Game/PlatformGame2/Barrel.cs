@@ -1,52 +1,61 @@
 ﻿using System.Drawing;
+
 /// <summary>
 /// Barrel.cs
 /// 
-/// This class file details the function of the turtle enemy.
-/// Variables: SPEED, OnPlatform, GoingLeft, platform
-/// Methods: Constructor, movement
+/// This class file details the function of the barrel enemy.
+/// Constant: SPEED
+/// Properties: OnPlatform, GoingLeft, platform
+/// Methods: Constructor, Movement
 /// </summary>
+
 namespace PlatformGame2
 {
     class Barrel : Enemy
     {
-        //constant variable
+        // Constant
         private const int SPEED = 5;
-        
-        //properties
+
+        // Properties
         public bool OnPlatform { set; get; }
         public bool GoingLeft { set; get; }
-        public Platform platform { set; get; }
-        
-        //full constructor
+        public Platform Platform { set; get; }
+
+        // Constructor
         public Barrel(int locX, int locY, bool left) : base(locX, locY, "barrel")
         {
             this.GoingLeft = left;
             OnPlatform = false;
         }
-        //movement method
+        // Movement method
         public override void Movement()
         {
+            // Move left
             if (GoingLeft)
             {
                 Left -= SPEED;
-                Image = Image.FromFile("barrelRight.gif");
+                Image = Image.FromFile("barrelLeft.gif");
             }
+            // Move right
             else
             {
                 Left += SPEED;
-                Image = Image.FromFile("barrelLeft.gif");
+                Image = Image.FromFile("barrelRight.gif");
             }
 
-            if (platform != null)
+            // Barrel is on a platform
+            if (Platform != null)
             {
                 OnPlatform = true;
-                if (Right < platform.Left || Left > platform.Right)
+
+                // If barrel moves off the end of the platform, fall
+                if (Right < Platform.Left || Left > Platform.Right)
                 {
                     OnPlatform = false;
                 }
             }
 
+            // If not on a platform, fall
             if (!OnPlatform)
             {
                 Top += SPEED;

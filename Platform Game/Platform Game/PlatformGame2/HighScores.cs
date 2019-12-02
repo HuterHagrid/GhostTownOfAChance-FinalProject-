@@ -1,11 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Text;
+
+/// <summary>
 /// HighScores.cs
 /// 
-/// This wrapper class uses HighScore to create a list of class objects
-/// variables: highscores (list of highscores)
-/// Methods: no arguement constructor, Read, Write, Worthy, AddNewHS, Order, ToString
+/// This class file defines a High Scores List
+/// Variable: highscores
+/// Methods: Constructor, Read, Write, Worthy, AddNewHs, Oreder, ToString
+/// </summary>
+
 namespace PlatformGame2
 {
     class HighScores
