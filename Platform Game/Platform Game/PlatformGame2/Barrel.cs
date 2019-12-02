@@ -13,7 +13,7 @@ namespace PlatformGame2
 {
     class Barrel : Enemy
     {
-        //constant variable
+        // Constant
         private const int SPEED = 5;
 
         // Properties
@@ -27,7 +27,7 @@ namespace PlatformGame2
             this.GoingLeft = left;
             OnPlatform = false;
         }
-        //movement method
+        // Movement method
         public override void Movement()
         {
             // Move left

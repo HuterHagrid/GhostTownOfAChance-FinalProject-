@@ -107,11 +107,7 @@ namespace PlatformGame2
 
         public override void Next()
         {
-            Hide();
-            Level5 level5 = new Level5(GetScore(), GetLives(), SplashHold);
-            level5.Closed += (s, args) => SplashHold.Close();
-            level5.Show();
-            Dispose();
+            End();
         }
 
         private void InitializeComponent()

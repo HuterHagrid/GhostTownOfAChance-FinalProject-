@@ -13,14 +13,15 @@ namespace PlatformGame2
 {
     class Turtle : Enemy
     {
-        //variables
+        // Constants
         private const int MAX = 100;
         private const int STEP = 1;
-        
+
+        // Variables
         private int x;
         private bool goLeft;
 
-        //full constructor
+        // Full Constructor
         public Turtle(int locX, int locY, bool offset) : base(locX, locY, "turtle")
         {
             if (offset)
@@ -35,7 +36,7 @@ namespace PlatformGame2
             goLeft = true;
         }
 
-        //movement method
+        // Movement method
         public override void Movement()
         {
             // Left
