@@ -18,8 +18,6 @@ namespace PlatformGame2
 
             Platform plat1 = new Platform(10, 39 * JS, 50, 10, "platform");
             Controls.Add(plat1);
-            Platform edge1 = new Platform(50, 38 * JS, 12, 50, "edge");
-            Controls.Add(edge1);
             Platform plat2 = new Platform(10, 31 * JS, 80, 10, "platform");
             Controls.Add(plat2);
             Platform plat3 = new Platform(200, 33 * JS, 80, 10, "platform");

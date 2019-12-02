@@ -6,7 +6,7 @@ namespace PlatformGame2
     {
         public Level5(int score, int lives, Splash splash) : base(score, lives, splash)
         {
-            Text += ": Bonus Stage";
+            Text += ": Level 5";
 
             SplashHold = splash;
             //platforms
@@ -49,6 +49,28 @@ namespace PlatformGame2
             Barrel barrel3 = new Barrel(750, 650, true);
             Controls.Add(barrel3);
 
+            //ghosts
+            Ghost ghost1 = new Ghost(500, 500, true);
+            Controls.Add(ghost1);
+            Ghost ghost2 = new Ghost(500, 500, false);
+            Controls.Add(ghost2);
+            Ghost ghost3 = new Ghost(800, 300, true);
+            Controls.Add(ghost3);
+            Ghost ghost4 = new Ghost(800, 300, false);
+            Controls.Add(ghost4);
+            Ghost ghost5 = new Ghost(200, 300, false);
+            Controls.Add(ghost5);
+
+            //turtles
+            Turtle turtle1 = new Turtle(20, 554, false);
+            Controls.Add(turtle1);
+            Turtle turtle2 = new Turtle(820, 554, false);
+            Controls.Add(turtle2);
+            Turtle turtle3 = new Turtle(20, 194, false);
+            Controls.Add(turtle3);
+            Turtle turtle4 = new Turtle(820, 194, false);
+            Controls.Add(turtle4);
+
             // exit
             Entity exit = new Entity(500, 61, "exit");
             Controls.Add(exit);
@@ -70,22 +92,33 @@ namespace PlatformGame2
             Controls.Add(coin7);
             Entity coin8 = new Entity(760, 180, "coin");
             Controls.Add(coin8);
-            Entity coin9 = new Entity(900, 180, "coin");
+            Entity coin9 = new Entity(900, 160, "coin");
             Controls.Add(coin9);
-            Entity coin10 = new Entity(880, 180, "coin");
+            Entity coin10 = new Entity(880, 160, "coin");
             Controls.Add(coin10);
-            Entity coin11 = new Entity(860, 180, "coin");
+            Entity coin11 = new Entity(860, 160, "coin");
             Controls.Add(coin11);
-            Entity coin12 = new Entity(840, 180, "coin");
+            Entity coin12 = new Entity(840, 160, "coin");
             Controls.Add(coin12);
-            Entity coin13 = new Entity(820, 180, "coin");
+            Entity coin13 = new Entity(820, 160, "coin");
             Controls.Add(coin13);
-            Entity coin14 = new Entity(800, 180, "coin");
+            Entity coin14 = new Entity(800, 160, "coin");
             Controls.Add(coin14);
-            Entity coin15 = new Entity(780, 180, "coin");
+            Entity coin15 = new Entity(780, 160, "coin");
             Controls.Add(coin15);
-            Entity coin16 = new Entity(760, 180, "coin");
+            Entity coin16 = new Entity(760, 160, "coin");
             Controls.Add(coin16);
+
+            Entity coin17 = new Entity(150, 160, "coin");
+            Controls.Add(coin17);
+            Entity coin18 = new Entity(130, 160, "coin");
+            Controls.Add(coin18);
+            Entity coin19 = new Entity(130, 180, "coin");
+            Controls.Add(coin19);
+            Entity coin20 = new Entity(150, 180, "coin");
+            Controls.Add(coin20);
+
+
 
 
         }

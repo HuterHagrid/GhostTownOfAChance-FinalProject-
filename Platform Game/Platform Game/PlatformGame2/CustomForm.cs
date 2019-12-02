@@ -477,7 +477,7 @@ namespace PlatformGame2
             return lives;
         }
         
-        // Updaters for Score and Lives
+        // Updaters\Setters for Score and Lives
         public void UpdateScore(int num)
         {
             score += num;
