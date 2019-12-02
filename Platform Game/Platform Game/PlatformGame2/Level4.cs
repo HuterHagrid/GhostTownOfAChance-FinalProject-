@@ -1,4 +1,10 @@
-﻿using System.Windows.Forms;
+﻿
+/// <summary>
+/// Level4.cs
+/// 
+/// Level 4 is the final level. Ghosts are added and all enemies are present.
+/// Methods: Constructor, Next
+/// </summary>
 
 namespace PlatformGame2
 {
@@ -10,7 +16,7 @@ namespace PlatformGame2
 
             SplashHold = splash;
 
-            Platform plat1 = new Platform(10, 38 * JS, 50, 10, "platform");
+            Platform plat1 = new Platform(10, 39 * JS, 50, 10, "platform");
             Controls.Add(plat1);
             Platform edge1 = new Platform(50, 38 * JS, 12, 50, "edge");
             Controls.Add(edge1);
@@ -116,11 +122,7 @@ namespace PlatformGame2
 
         public override void Next()
         {
-            Hide();
-            Level5 level5 = new Level5(GetScore(), GetLives(), SplashHold);
-            level5.Closed += (s, args) => SplashHold.Close();
-            level5.Show();
-            Dispose();
+            End();
         }
 
         private void InitializeComponent()
