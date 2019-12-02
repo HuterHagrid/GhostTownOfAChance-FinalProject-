@@ -34,6 +34,8 @@ namespace PlatformGame2
         // Splash Holder
         public Splash SplashHold { set; get; }
 
+        private bool lookLeft;
+
         private System.ComponentModel.IContainer components;
 
         public CustomForm() { }
@@ -66,6 +68,7 @@ namespace PlatformGame2
             // Initialize player
             player = new Entity(50, 600, "player");
             Controls.Add(player);
+            lookLeft = false;
 
             // Game Bounds
             // left wall
@@ -111,12 +114,14 @@ namespace PlatformGame2
             {
                 goLeft = true;
                 goRight = false;
+                lookLeft = true;
                 player.Image = Image.FromFile("run_left.gif");
             }
             else if (e.KeyCode == Keys.Right)
             {
                 goRight = true;
                 goLeft = false;
+                lookLeft = false;
                 player.Image = Image.FromFile("run_right.gif");
             }
 
@@ -208,6 +213,7 @@ namespace PlatformGame2
                         force = 8;
                         player.Top = x.Top - player.Height;
                         onPlatform = true;
+                        currentPlatform = (Platform)x;
                         if (goLeft)
                         {
                             player.Image = Image.FromFile("run_left.gif");
@@ -218,7 +224,14 @@ namespace PlatformGame2
                         }
                         else
                         {
-                            player.Image = Image.FromFile("stand_right.png");
+                            if (lookLeft)
+                            {
+                                player.Image = Image.FromFile("stand_left.png");
+                            }
+                            else
+                            {
+                                player.Image = Image.FromFile("stand_right.png");
+                            }
                         }
                     }
                     // Player cannot go through edges
@@ -260,7 +273,7 @@ namespace PlatformGame2
 
                 // Player landing on platform check
                 if (x.Tag.Equals("platform") && player.Right > x.Left && player.Left < x.Right
-                        && (player.Bottom <= x.Top && player.Bottom >= x.Top - JS) && !jumping)
+                        && (player.Bottom <= x.Top && player.Bottom >= x.Top - 20) && !jumping)
                 {
                     force = 8;
                     player.Top = x.Top - player.Height;
@@ -276,7 +289,14 @@ namespace PlatformGame2
                     }
                     else
                     {
-                        player.Image = Image.FromFile("stand_right.png");
+                        if (lookLeft)
+                        {
+                            player.Image = Image.FromFile("stand_left.png");
+                        }
+                        else
+                        {
+                            player.Image = Image.FromFile("stand_right.png");
+                        }
                     }
                 }
 
@@ -285,12 +305,11 @@ namespace PlatformGame2
                 {
                     // If player land on a turtle or barrel, kill it and add to score
                     if (player.Right > x.Left && player.Left < x.Right &&
-                        (player.Bottom < x.Top && player.Bottom >= x.Top - JS) && !jumping)
+                        (player.Bottom < x.Top && player.Bottom >= x.Top - 20) && !jumping)
                     {
                         if (x.Tag.Equals("turtle"))
                         {
                             UpdateScore(15);
-                            //x.Image = Image.FromFile("turtleDeath.png");
                             sfxPlayer = new System.Media.SoundPlayer("turtledie.wav");
                             sfxPlayer.Play();
                         }

@@ -111,7 +111,7 @@ namespace PlatformGame2
                 }
                 else
                 {
-                    sb.Append(string.Format("{0}.\n", i++));
+                    sb.Append(string.Format(" {0}.\n", i++));
                 }
             }
             return sb.ToString();
