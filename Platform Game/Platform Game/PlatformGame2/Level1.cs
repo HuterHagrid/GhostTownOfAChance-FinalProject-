@@ -1,9 +1,14 @@
-﻿using System.Windows.Forms;
+﻿
+/// <summary>
+/// Level1.cs
+/// 
+/// Level 1 is an intro level. There are only platforms and coins in order to get
+/// the player familiar with the game controls.
+/// Methods: Constructor, Next
+/// </summary>
 
 namespace PlatformGame2
 {
-    // Level 1 is an intro level. There are only platforms and coins in order to get
-    // the player familiar with the game controls.
     public class Level1 : CustomForm
     {
         public Level1(int score, int lives, Splash splash) : base(score, lives, splash)

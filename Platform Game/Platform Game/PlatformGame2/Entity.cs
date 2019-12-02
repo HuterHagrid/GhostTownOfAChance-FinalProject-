@@ -1,19 +1,24 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
+
 /// <summary>
 /// Entity.cs
 /// 
 /// This class file sets up the different elements in the CustomForm window of gameplay
 /// Methods: Constructor
 /// </summary>
+
 namespace PlatformGame2
 {
     class Entity : PictureBox
     {
         public Entity(int locX, int locY, string tag)
         {
+            // Set the Entity's starting location and Tag
             Location = new Point(locX, locY);
             Tag = tag;
+
+            // Set the size and starting image for the entity
             if (tag.Equals("player"))
             {
                 Size = new Size(16, 21);

@@ -1,5 +1,14 @@
 ﻿using System.Drawing;
 
+/// <summary>
+/// Turtle.cs
+/// 
+/// This class file details the function of the turtle enemy.
+/// Constants: MAX, STEP
+/// Variables: x, goLeft
+/// Methods: Constructor, Movement
+/// </summary>
+
 namespace PlatformGame2
 {
     class Turtle : Enemy
@@ -26,6 +35,7 @@ namespace PlatformGame2
 
         public override void Movement()
         {
+            // Left
             if (goLeft)
             {
                 Left += STEP;
@@ -35,6 +45,7 @@ namespace PlatformGame2
                     Image = Image.FromFile("tortoiseLeft.gif");
                 }
             }
+            // Right
             else
             {
                 Left -= STEP;

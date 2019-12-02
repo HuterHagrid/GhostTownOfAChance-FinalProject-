@@ -1,6 +1,19 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
+/// <summary>
+/// CustomForm.cs
+/// 
+/// This class file defines the base game mechanics used for each level such as player movement,
+/// enemy movement, collision detection, score keeping, next level, and end of game functionality.
+/// Constant: JS (jump speed)
+/// Variables: player, scoreKeep, livesKeep, goLeft, goRight, jumping, jumpSpeed, force, score,
+///            lives, onPlatform, currentPlatform, timer, lookLeft
+/// Property: SplashHold
+/// Methods: Constructor, Keyisdown, Keyisup, Timer_Tick, Next, End, LabelMaker, GetScore,
+///          GetLives, UpdateScore, UpdateLives
+/// </summary>
+
 namespace PlatformGame2
 {
     public class CustomForm : Form
@@ -42,19 +55,20 @@ namespace PlatformGame2
 
         public System.Media.SoundPlayer sfxPlayer;
 
+        // Constructor
         public CustomForm(int score, int lives, Splash splash)
         {
             InitializeComponent();
 
             // Initialize Score Keeper
-            scoreKeep = labelMaker();
+            scoreKeep = LabelMaker();
             scoreKeep.Location = new Point(880, 10);
             scoreKeep.ForeColor = Color.Yellow;
             UpdateScore(score);
             Controls.Add(scoreKeep);
 
             // Initialize Lives Keeper
-            livesKeep = labelMaker();
+            livesKeep = LabelMaker();
             livesKeep.Location = new Point(880, 40);
             livesKeep.ForeColor = Color.Red;
             livesKeep.Text = lives.ToString();
@@ -71,13 +85,13 @@ namespace PlatformGame2
             lookLeft = false;
 
             // Game Bounds
-            // left wall
+            // Left wall
             Platform left = new Platform(0, 0, 20, Height, "edge");
             Controls.Add(left);
-            // right wall
+            // Right wall
             Platform right = new Platform(Width - 35, 0, 20, Height, "edge");
             Controls.Add(right);
-            // ground
+            // Floor
             Platform bottom = new Platform(0, Height - 55, Width, 20, "floor");
             Controls.Add(bottom);
         }
@@ -92,7 +106,7 @@ namespace PlatformGame2
             // 
             this.timer.Enabled = true;
             this.timer.Interval = 20;
-            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            this.timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
             // CustomForm
             // 
@@ -100,14 +114,14 @@ namespace PlatformGame2
             this.ClientSize = new System.Drawing.Size(978, 695);
             this.Name = "CustomForm";
             this.Text = "Ghost Town of a Chance";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyisdown);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.keyisup);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Keyisdown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Keyisup);
             this.ResumeLayout(false);
 
         }
 
         // Detects User Inputs
-        private void keyisdown(object sender, KeyEventArgs e)
+        private void Keyisdown(object sender, KeyEventArgs e)
         {
             // Left and Right, can only do one at a time
             if (e.KeyCode == Keys.Left)
@@ -146,7 +160,7 @@ namespace PlatformGame2
         }
 
         // Detects end of user inputs
-        private void keyisup(object sender, KeyEventArgs e)
+        private void Keyisup(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Left)
             {
@@ -164,8 +178,8 @@ namespace PlatformGame2
             }
         }
 
-        // Game timer that determines player movement and collisions
-        private void timer_Tick(object sender, System.EventArgs e)
+        // Game timer that determines player and enemy movement and collisions
+        private void Timer_Tick(object sender, System.EventArgs e)
         {
             // If player is not on a platform, apply jumpspeed
             if (!onPlatform)
@@ -214,6 +228,9 @@ namespace PlatformGame2
                         player.Top = x.Top - player.Height;
                         onPlatform = true;
                         currentPlatform = (Platform)x;
+
+                        // When player lands on floor, switch sprite from jumping to
+                        // appropriate image
                         if (goLeft)
                         {
                             player.Image = Image.FromFile("run_left.gif");
@@ -246,6 +263,7 @@ namespace PlatformGame2
                             player.Left = x.Left - player.Width;
                         }
                     }
+
                     // Player collects a coin
                     if (x.Tag.Equals("coin"))
                     {
@@ -265,8 +283,8 @@ namespace PlatformGame2
                     // Player reaches the exit
                     if (x.Tag.Equals("exit"))
                     {
-                        timer.Stop();
                         UpdateScore(50);
+                        timer.Stop();
                         Next();
                     }
                 } // End of Intersection Checks
@@ -279,6 +297,9 @@ namespace PlatformGame2
                     player.Top = x.Top - player.Height;
                     onPlatform = true;
                     currentPlatform = (Platform)x;
+
+                    // When player lands on platform, switch sprite from jumping to
+                    // appropriate image
                     if (goLeft)
                     {
                         player.Image = Image.FromFile("run_left.gif");
@@ -373,7 +394,7 @@ namespace PlatformGame2
                                 && temp.Bounds.IntersectsWith(y.Bounds))
                             {
                                 Platform temp2 = (Platform)y;
-                                temp.platform = temp2;
+                                temp.Platform = temp2;
                             }
                         }
 
@@ -430,13 +451,13 @@ namespace PlatformGame2
             if (hs.Worthy(GetScore()))
             {
                 // Initiate high score prompt
-                Prompt prompt = new Prompt(GetScore(), SplashHold);
+                new Prompt(GetScore(), SplashHold);
             }
             Dispose();
         }
 
         // Creates a Label for a stat keeper
-        public Label labelMaker()
+        public Label LabelMaker()
         {
             Label newLabel = new Label();
             newLabel.Size = new Size(75, 25);

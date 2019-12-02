@@ -43,7 +43,7 @@
             this.playGameButton.TabIndex = 0;
             this.playGameButton.Text = "Play";
             this.playGameButton.UseVisualStyleBackColor = false;
-            this.playGameButton.Click += new System.EventHandler(this.playGameButton_Click);
+            this.playGameButton.Click += new System.EventHandler(this.PlayGameButton_Click);
             // 
             // quitButton
             // 
@@ -54,7 +54,7 @@
             this.quitButton.TabIndex = 1;
             this.quitButton.Text = "Exit";
             this.quitButton.UseVisualStyleBackColor = false;
-            this.quitButton.Click += new System.EventHandler(this.quitButton_Click);
+            this.quitButton.Click += new System.EventHandler(this.QuitButton_Click);
             // 
             // highScoresRichTextBox
             // 

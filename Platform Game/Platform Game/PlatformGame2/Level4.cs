@@ -1,4 +1,11 @@
 ﻿
+/// <summary>
+/// Level4.cs
+/// 
+/// Level 4 is the final level. Ghosts are added and all enemies are present.
+/// Methods: Constructor, Next
+/// </summary>
+
 namespace PlatformGame2
 {
     class Level4 : CustomForm

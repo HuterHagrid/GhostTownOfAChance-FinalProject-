@@ -1,5 +1,13 @@
 ﻿using System;
 
+/// <summary>
+/// HighScore.cs
+/// 
+/// This class file defines a High Score
+/// Properties: Name, Score
+/// Methods: Constructor, ToString, CompareTo
+/// </summary>
+
 namespace PlatformGame2
 {
     class HighScore : IComparable

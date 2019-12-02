@@ -2,6 +2,14 @@
 using System.IO;
 using System.Text;
 
+/// <summary>
+/// HighScores.cs
+/// 
+/// This class file defines a High Scores List
+/// Variable: highscores
+/// Methods: Constructor, Read, Write, Worthy, AddNewHs, Oreder, ToString
+/// </summary>
+
 namespace PlatformGame2
 {
     class HighScores
