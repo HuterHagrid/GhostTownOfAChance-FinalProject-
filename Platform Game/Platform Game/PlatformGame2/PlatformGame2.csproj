@@ -72,6 +72,9 @@
     <Compile Include="Level2.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Level5.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Prompt.cs">
       <SubType>Form</SubType>
     </Compile>
